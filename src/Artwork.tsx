@@ -22,7 +22,9 @@ export const Artwork = forwardRef<SVGSVGElement, Props>(function Artwork(
       viewBox={drawing.viewBox.join(' ')}
       role="group"
       aria-label={
-        preview ? '테스트 도안 미리보기' : `${drawing.title} 색칠 도안`
+        preview
+          ? `${drawing.title} 완성 미리보기`
+          : `${drawing.title} 색칠 도안`
       }
       className="artwork"
     >
@@ -34,17 +36,6 @@ export const Artwork = forwardRef<SVGSVGElement, Props>(function Artwork(
         rx="20"
         fill="#fffdf5"
       />
-      <g
-        fill="none"
-        stroke="#514c43"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      >
-        {drawing.decorations?.map((item, index) => (
-          <path key={index} d={item.d} stroke={item.stroke} />
-        ))}
-      </g>
       {drawing.regions.map((region) => {
         const color = drawing.colors.find((item) => item.id === region.colorId)!
         const filled = preview || painted.has(region.id)
@@ -60,8 +51,8 @@ export const Artwork = forwardRef<SVGSVGElement, Props>(function Artwork(
               data-current={target}
               data-hint={region.id === hintId}
               fill={filled ? color.hex : '#fffefb'}
-              stroke="#514c43"
-              strokeWidth="3"
+              stroke={drawing.strokeColor ?? '#514c43'}
+              strokeWidth={drawing.strokeWidth ?? 3}
               strokeLinejoin="round"
               className={`paint-region ${target ? 'is-current' : ''} ${region.id === hintId ? 'is-hint' : ''}`}
               role={interactive ? 'button' : undefined}
@@ -82,25 +73,50 @@ export const Artwork = forwardRef<SVGSVGElement, Props>(function Artwork(
                 }
               }}
             />
-            {!filled && (
-              <text
-                x={region.label[0]}
-                y={region.label[1]}
-                data-guide="true"
-                textAnchor="middle"
-                dominantBaseline="central"
-                pointerEvents="none"
-                fill={target ? '#9b5d16' : '#8c8b80'}
-                fontFamily="sans-serif"
-                fontSize="20"
-                fontWeight="700"
-              >
-                {region.colorId}
-              </text>
-            )}
           </g>
         )
       })}
+      <g
+        fill="none"
+        strokeWidth={drawing.strokeWidth ?? 3}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        pointerEvents="none"
+        aria-hidden="true"
+      >
+        {drawing.decorations?.map((item, index) => (
+          <path
+            key={index}
+            d={item.d}
+            stroke={item.stroke}
+            fill={
+              item.paintWith && !preview && !painted.has(item.paintWith)
+                ? '#fffefb'
+                : (item.fill ?? 'none')
+            }
+            strokeWidth={item.strokeWidth ?? drawing.strokeWidth ?? 3}
+          />
+        ))}
+      </g>
+      {drawing.regions
+        .filter((region) => !preview && !painted.has(region.id))
+        .map((region) => (
+          <text
+            key={`label-${region.id}`}
+            x={region.label[0]}
+            y={region.label[1]}
+            data-guide="true"
+            textAnchor="middle"
+            dominantBaseline="central"
+            pointerEvents="none"
+            fill={region.colorId === activeId ? '#9b5d16' : '#676b61'}
+            fontFamily="sans-serif"
+            fontSize={drawing.labelSize ?? 20}
+            fontWeight="700"
+          >
+            {region.colorId}
+          </text>
+        ))}
     </svg>
   )
 })

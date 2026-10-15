@@ -3,7 +3,7 @@ import { Artwork } from './Artwork'
 import {
   drawings,
   officialCatalog,
-  testDrawing,
+  featuredDrawing,
   type Drawing,
 } from './data/drawings'
 import {
@@ -47,7 +47,7 @@ function Dialog({
 }
 
 function Home({ onOpen }: { onOpen: (drawing: Drawing) => void }) {
-  const { saved } = readProgress(testDrawing)
+  const { saved } = readProgress(featuredDrawing)
   const count = saved?.history.length ?? 0
   return (
     <main className="home">
@@ -63,35 +63,36 @@ function Home({ onOpen }: { onOpen: (drawing: Drawing) => void }) {
           완성돼요.
         </p>
       </section>
-      <section className="test-card" aria-labelledby="test-title">
-        <div className="test-preview">
-          <Artwork drawing={testDrawing} history={[]} preview />
+      <section className="featured-card" aria-labelledby="featured-title">
+        <div className="featured-preview">
+          <Artwork drawing={featuredDrawing} history={[]} preview />
           <span className="preview-caption">색칠하면 이렇게 변해요</span>
         </div>
-        <div className="test-copy">
-          <span className="badge">체험용 · 정식 승인 도안 아님</span>
-          <h2 id="test-title">햇살 아래 작은 꽃</h2>
+        <div className="featured-copy">
+          <span className="badge">첫 번째 정식 도안 · 무지개 놀이터</span>
+          <h2 id="featured-title">{featuredDrawing.title}</h2>
           <p>
-            햇님과 꽃, 작은 나비를
+            무지개 아래, 노란 우비를 입은 아이!
             <br />
-            8가지 색으로 채워 볼까요?
+            {featuredDrawing.colors.length}가지 색으로 놀이터를 채워 볼까요?
           </p>
           <span className="details">
-            8색 <span>·</span> 25개 영역 <span>·</span> 테스트 SVG
+            {featuredDrawing.colors.length}색 <span>·</span>{' '}
+            {featuredDrawing.regions.length}개 영역 <span>·</span> 터치 SVG
           </span>
           {count > 0 && (
             <div className="saved-summary">
-              {count === testDrawing.regions.length
+              {count === featuredDrawing.regions.length
                 ? '완성한 그림이 있어요!'
-                : `${progress(testDrawing, saved!.history)}%까지 칠했어요. 이어서 해 볼까요?`}
+                : `${progress(featuredDrawing, saved!.history)}%까지 칠했어요. 이어서 해 볼까요?`}
             </div>
           )}
           <button
             className="button primary start-button"
-            onClick={() => onOpen(testDrawing)}
+            onClick={() => onOpen(featuredDrawing)}
           >
             {count > 0
-              ? count === testDrawing.regions.length
+              ? count === featuredDrawing.regions.length
                 ? '완성한 그림 보기'
                 : '이어서 색칠하기'
               : '색칠 시작하기'}{' '}
@@ -102,14 +103,13 @@ function Home({ onOpen }: { onOpen: (drawing: Drawing) => void }) {
       <section className="catalog" aria-labelledby="catalog-title">
         <div className="section-heading">
           <div>
-            <span className="eyebrow">다음에 만날 그림들</span>
+            <span className="eyebrow">나의 색칠 그림책</span>
             <h2 id="catalog-title">어떤 그림을 좋아하나요?</h2>
           </div>
           <span className="count-badge">5개 도안</span>
         </div>
         <p className="catalog-note">
-          정식 도안은 아직 준비 중이에요. 이미지가 등록되면 여기서 고를 수
-          있어요.
+          무지개 도안부터 시작해 보세요. 나머지 네 그림도 차례로 준비할게요.
         </p>
         <div className="catalog-grid">
           {officialCatalog.map((item) => (
@@ -174,6 +174,7 @@ function Coloring({
   const [celebrate, setCelebrate] = useState(false)
   const [exporting, setExporting] = useState(false)
   const svgRef = useRef<SVGSVGElement>(null)
+  const paletteRef = useRef<HTMLDivElement>(null)
   const stageRef = useRef<HTMLDivElement>(null)
   const hintTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const current = activeColor(drawing, history)
@@ -184,6 +185,14 @@ function Coloring({
   const percent = progress(drawing, history)
 
   useEffect(() => () => clearTimeout(hintTimer.current), [])
+  useEffect(() => {
+    const palette = paletteRef.current
+    const chip = palette?.querySelector<HTMLElement>('[aria-current="step"]')
+    if (palette && chip)
+      palette.scrollTo({
+        left: chip.offsetLeft - palette.clientWidth / 2 + chip.clientWidth / 2,
+      })
+  }, [current?.id])
 
   function commit(next: string[]) {
     setHistory(next)
@@ -290,7 +299,12 @@ function Coloring({
         >
           <span style={{ width: `${percent}%` }} />
         </div>
-        <div className="palette" aria-label="색칠 순서">
+        <div
+          className="palette"
+          ref={paletteRef}
+          aria-label="색칠 순서"
+          tabIndex={0}
+        >
           {drawing.colors.map((color) => (
             <span
               key={color.id}
@@ -330,7 +344,12 @@ function Coloring({
                 {current.id}
               </span>
               <div>
-                <strong>{current.name} 차례예요</strong>
+                <strong>
+                  {current.name} 차례예요{' '}
+                  <span className="step-count">
+                    {current.id}/{drawing.colors.length}
+                  </span>
+                </strong>
                 <span>
                   {current.id}번을 찾아 톡! <b>{remaining}곳</b> 남았어요
                 </span>
