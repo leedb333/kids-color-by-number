@@ -1,18 +1,18 @@
 import { expect, test, type Page } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
-import { testDrawing } from '../src/data/drawings'
+import { featuredDrawing as drawing, testDrawing } from '../src/data/drawings'
 import { storageKey } from '../src/engine'
 
-const firstColor = testDrawing.regions.filter((region) => region.colorId === 1)
-const ordered = testDrawing.colors.flatMap((color) =>
-  testDrawing.regions.filter((region) => region.colorId === color.id),
+const firstColors = drawing.regions.filter((region) => region.colorId <= 2)
+const ordered = drawing.colors.flatMap((color) =>
+  drawing.regions.filter((region) => region.colorId === color.id),
 )
 async function openDrawing(page: Page) {
   await page.goto('./')
   await page.getByRole('button', { name: '색칠 시작하기' }).tap()
 }
 async function tapRegion(page: Page, id: string) {
-  const region = testDrawing.regions.find((item) => item.id === id)!
+  const region = drawing.regions.find((item) => item.id === id)!
   const locator = page.locator(`[data-region="${id}"]`)
   await locator.scrollIntoViewIfNeeded()
   const point = await locator.evaluate((element, label) => {
@@ -25,26 +25,37 @@ async function tapRegion(page: Page, id: string) {
   await page.touchscreen.tap(point.x, point.y)
 }
 
-test('five official menus are clearly pending; test SVG launches on a portrait tablet', async ({
+test('the official rainbow puzzle is featured and four future designs remain pending', async ({
   page,
 }) => {
   const errors: string[] = []
   page.on('pageerror', (error) => errors.push(error.message))
+  page.on('console', (message) => {
+    if (message.type() === 'error') errors.push(message.text())
+  })
   await page.goto('./')
   await expect(page.getByRole('button', { name: /도안 준비 중/ })).toHaveCount(
-    5,
+    4,
   )
   for (const button of await page
     .getByRole('button', { name: /도안 준비 중/ })
     .all())
     await expect(button).toBeDisabled()
-  await expect(page.getByText('체험용 · 정식 승인 도안 아님')).toBeVisible()
+  await expect(page.getByRole('heading', { name: drawing.title })).toBeVisible()
+  await expect(page.getByText('햇살 아래 작은 꽃')).toHaveCount(0)
+  await expect(
+    page.getByRole('button', {
+      name: /무지개를 바라보는 아이, 25색, 색칠하기/,
+    }),
+  ).toBeEnabled()
   await page.screenshot({
     path: 'test-results/home-tablet.png',
     fullPage: true,
   })
   await page.getByRole('button', { name: '색칠 시작하기' }).tap()
-  await expect(page.locator('[data-region]')).toHaveCount(25)
+  await expect(page.locator('[data-region]')).toHaveCount(
+    drawing.regions.length,
+  )
   await expect(page.getByRole('progressbar')).toHaveAttribute(
     'aria-valuenow',
     '0',
@@ -65,30 +76,30 @@ test('touch coloring enforces order, advances, undoes, autosaves and resumes', a
   page,
 }) => {
   await openDrawing(page)
-  await tapRegion(page, 'cloud-left')
-  await expect(page.locator('[data-region="cloud-left"]')).toHaveAttribute(
+  await tapRegion(page, 'rainbow-red')
+  await expect(page.locator('[data-region="rainbow-red"]')).toHaveAttribute(
     'data-painted',
     'false',
   )
   await expect(
-    page.getByText('지금은 1번 햇살 노랑 차례예요.', { exact: false }),
+    page.getByText('지금은 1번 맑은 하늘 차례예요.', { exact: false }),
   ).toBeVisible()
-  for (const region of firstColor) await tapRegion(page, region.id)
-  await expect(
-    page.getByText('하늘 파랑 차례예요', { exact: true }),
-  ).toBeVisible()
+  for (const region of firstColors) await tapRegion(page, region.id)
+  await expect(page.locator('.current-instruction strong')).toContainText(
+    '무지개 빨강 차례예요',
+  )
   await page.getByRole('button', { name: '되돌리기' }).tap()
-  await expect(
-    page.getByText('햇살 노랑 차례예요', { exact: true }),
-  ).toBeVisible()
-  const count = firstColor.length - 1
+  await expect(page.locator('.current-instruction strong')).toContainText(
+    '구름 하양 차례예요',
+  )
+  const count = firstColors.length - 1
   await expect(page.locator('[data-painted=true]')).toHaveCount(count)
   await page.reload()
   await page.getByRole('button', { name: '이어서 색칠하기' }).tap()
   await expect(page.locator('[data-painted=true]')).toHaveCount(count)
   await expect(page.getByRole('progressbar')).toHaveAttribute(
     'aria-valuenow',
-    String(Math.round((count / 25) * 100)),
+    String(Math.round((count / drawing.regions.length) * 100)),
   )
   await page.getByRole('button', { name: '도안 선택' }).tap()
   await expect(
@@ -118,10 +129,10 @@ test('zoom, accessible number controls and hints work without coloring for the c
   await expect(page.locator('[data-hint=true]')).toHaveCount(1)
   await expect(page.locator('[data-painted=true]')).toHaveCount(0)
   await page
-    .getByRole('button', { name: '1번 햇살 노랑 영역 sun', exact: true })
+    .getByRole('button', { name: '1번 맑은 하늘 영역 sky', exact: true })
     .focus()
   await page.keyboard.press('Enter')
-  await expect(page.locator('[data-region=sun]')).toHaveAttribute(
+  await expect(page.locator('[data-region=sky]')).toHaveAttribute(
     'data-painted',
     'true',
   )
@@ -132,7 +143,7 @@ test('reset requires confirmation, can be cancelled, and persists the cleared dr
   page,
 }) => {
   await openDrawing(page)
-  await tapRegion(page, 'sun')
+  await tapRegion(page, 'sky')
   await page.getByRole('button', { name: '처음부터', exact: true }).tap()
   await page.getByRole('button', { name: '계속 칠할래요' }).tap()
   await expect(page.locator('[data-painted=true]')).toHaveCount(1)
@@ -173,7 +184,7 @@ test('all regions complete by touch, celebration appears, PNG is a real colored 
   const file = await readFile((await download.path())!)
   expect(file.subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a')
   expect(file.readUInt32BE(16)).toBe(1200)
-  expect(file.readUInt32BE(20)).toBe(1240)
+  expect(file.readUInt32BE(20)).toBe(1500)
   const pixel = await page.evaluate(async (data) => {
     const image = new Image()
     image.src = `data:image/png;base64,${data}`
@@ -183,14 +194,24 @@ test('all regions complete by touch, celebration appears, PNG is a real colored 
     canvas.height = image.height
     const context = canvas.getContext('2d')!
     context.drawImage(image, 0, 0)
-    return [...context.getImageData(220, 210, 1, 1).data]
+    return [
+      [843, 698],
+      [486, 845],
+      [378, 1290],
+    ].map(([x, y]) => [...context.getImageData(x, y, 1, 1).data])
   }, file.toString('base64'))
-  expect(pixel).toEqual([255, 207, 74, 255])
+  expect(pixel).toEqual([
+    [98, 200, 245, 255],
+    [255, 213, 44, 255],
+    [244, 82, 152, 255],
+  ])
   await page.reload()
   await page.getByRole('button', { name: '완성한 그림 보기' }).tap()
-  await expect(page.locator('[data-painted=true]')).toHaveCount(25)
+  await expect(page.locator('[data-painted=true]')).toHaveCount(
+    drawing.regions.length,
+  )
   await page.getByRole('button', { name: '되돌리기' }).tap()
-  await expect(page.getByText('화분 주황 차례예요')).toBeVisible()
+  await expect(page.getByText('놀이터 황금색 차례예요')).toBeVisible()
   await expect(
     page.getByRole('button', { name: '완성하면 그림을 저장할 수 있어요' }),
   ).toBeDisabled()
@@ -201,7 +222,7 @@ test('production service worker supports offline reload and continued touch colo
   context,
 }) => {
   await openDrawing(page)
-  await tapRegion(page, 'sun')
+  await tapRegion(page, 'sky')
   await page.evaluate(async () => {
     await navigator.serviceWorker.ready
     if (!navigator.serviceWorker.controller)
@@ -218,11 +239,11 @@ test('production service worker supports offline reload and continued touch colo
   await page.reload()
   await expect(page.getByText('오프라인 모드')).toBeVisible()
   await page.getByRole('button', { name: '이어서 색칠하기' }).tap()
-  await expect(page.locator('[data-region=sun]')).toHaveAttribute(
+  await expect(page.locator('[data-region=sky]')).toHaveAttribute(
     'data-painted',
     'true',
   )
-  await tapRegion(page, 'ray-top')
+  await tapRegion(page, 'cloud-left')
   await expect(page.locator('[data-painted=true]')).toHaveCount(2)
   await context.setOffline(false)
 })
@@ -236,9 +257,9 @@ test('blocked localStorage degrades visibly while coloring remains usable', asyn
     }
   })
   await openDrawing(page)
-  await tapRegion(page, 'sun')
+  await tapRegion(page, 'sky')
   await expect(page.getByText('⚠ 저장 공간을 사용할 수 없어요')).toBeVisible()
-  await expect(page.locator('[data-region=sun]')).toHaveAttribute(
+  await expect(page.locator('[data-region=sky]')).toHaveAttribute(
     'data-painted',
     'true',
   )
@@ -250,7 +271,7 @@ test('invalid saved data is ignored and a narrow mobile screen has no overflow',
   await page.setViewportSize({ width: 360, height: 800 })
   await page.addInitScript(
     (key) => localStorage.setItem(key, '{broken json'),
-    storageKey(testDrawing),
+    storageKey(drawing),
   )
   await openDrawing(page)
   await expect(page.getByRole('progressbar')).toHaveAttribute(
@@ -262,9 +283,76 @@ test('invalid saved data is ignored and a narrow mobile screen has no overflow',
       () => document.documentElement.scrollWidth <= innerWidth,
     ),
   ).toBe(true)
-  await tapRegion(page, 'sun')
-  await expect(page.locator('[data-region=sun]')).toHaveAttribute(
+  await tapRegion(page, 'sky')
+  await expect(page.locator('[data-region=sky]')).toHaveAttribute(
     'data-painted',
     'true',
   )
+})
+
+test('every number marks a visible paintable area; palette follows all 25 steps', async ({
+  page,
+}) => {
+  await openDrawing(page)
+  for (const region of drawing.regions) {
+    const locator = page.locator(`[data-region="${region.id}"]`)
+    await locator.scrollIntoViewIfNeeded()
+    const hit = await locator.evaluate((element, label) => {
+      const point = new DOMPoint(...label).matrixTransform(
+        element.closest('svg')!.getScreenCTM()!,
+      )
+      return document
+        .elementFromPoint(point.x, point.y)
+        ?.getAttribute('data-region')
+    }, region.label)
+    expect(
+      hit,
+      `Number for ${region.id} must be on its own exposed region`,
+    ).toBe(region.id)
+  }
+  for (const color of drawing.colors) {
+    const chip = page.locator('.palette [aria-current="step"]')
+    await expect(chip).toHaveText(String(color.id))
+    const visible = await chip.evaluate((element) => {
+      const item = element.getBoundingClientRect()
+      const container = element.parentElement!.getBoundingClientRect()
+      return item.left >= container.left && item.right <= container.right
+    })
+    expect(
+      visible,
+      `Current color ${color.id} must scroll into the palette`,
+    ).toBe(true)
+    for (const region of drawing.regions.filter(
+      (item) => item.colorId === color.id,
+    ))
+      await tapRegion(page, region.id)
+  }
+})
+
+test('legacy test progress is kept separate from the official puzzle', async ({
+  page,
+}) => {
+  await page.addInitScript(
+    ({ legacy, official }) => {
+      localStorage.setItem(
+        legacy,
+        JSON.stringify({
+          version: 1,
+          history: ['sun'],
+          updatedAt: new Date().toISOString(),
+        }),
+      )
+      localStorage.removeItem(official)
+    },
+    { legacy: storageKey(testDrawing), official: storageKey(drawing) },
+  )
+  await openDrawing(page)
+  await expect(page.locator('[data-painted=true]')).toHaveCount(0)
+  await tapRegion(page, 'sky')
+  expect(
+    await page.evaluate(
+      (key) => JSON.parse(localStorage.getItem(key)!).history,
+      storageKey(testDrawing),
+    ),
+  ).toEqual(['sun'])
 })

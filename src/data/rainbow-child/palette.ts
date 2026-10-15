@@ -1,0 +1,30 @@
+import type { PaintColor } from '../types'
+
+// A simplified reference palette: broad flat colors, no gradients or tiny shading cells.
+export const palette: PaintColor[] = [
+  { id: 1, name: '맑은 하늘', hex: '#62C8F5' },
+  { id: 2, name: '구름 하양', hex: '#FFFFFF' },
+  { id: 3, name: '무지개 빨강', hex: '#FF4F49' },
+  { id: 4, name: '무지개 주황', hex: '#FF9634' },
+  { id: 5, name: '무지개 노랑', hex: '#FFE550' },
+  { id: 6, name: '무지개 초록', hex: '#54CA62' },
+  { id: 7, name: '무지개 파랑', hex: '#259DEB' },
+  { id: 8, name: '무지개 보라', hex: '#7966E8' },
+  { id: 9, name: '새싹 연두', hex: '#8AC342' },
+  { id: 10, name: '나뭇잎 초록', hex: '#388E40' },
+  { id: 11, name: '나무 갈색', hex: '#A36C3D' },
+  { id: 12, name: '울타리 너머 초록', hex: '#64AB49' },
+  { id: 13, name: '풀밭 연두', hex: '#AFD45C' },
+  { id: 14, name: '산책길 모래색', hex: '#D8B997' },
+  { id: 15, name: '물웅덩이 하늘색', hex: '#6BD2FA' },
+  { id: 16, name: '반짝이는 물빛', hex: '#32A9E5' },
+  { id: 17, name: '머리카락 밤색', hex: '#85451F' },
+  { id: 18, name: '햇빛 머리카락', hex: '#AF6B36' },
+  { id: 19, name: '따뜻한 살구색', hex: '#FFD09C' },
+  { id: 20, name: '발그레 복숭아', hex: '#FFAD83' },
+  { id: 21, name: '우비 노랑', hex: '#FFD52C' },
+  { id: 22, name: '주머니 금빛', hex: '#EEB91D' },
+  { id: 23, name: '청바지 파랑', hex: '#287EB9' },
+  { id: 24, name: '장화 분홍', hex: '#F45298' },
+  { id: 25, name: '놀이터 황금색', hex: '#EDA934' },
+]

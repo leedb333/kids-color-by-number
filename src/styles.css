@@ -156,7 +156,7 @@ svg {
 .mobile-break {
   display: none;
 }
-.test-card {
+.featured-card {
   display: grid;
   grid-template-columns: 45% 55%;
   background: #fffdf5;
@@ -165,7 +165,7 @@ svg {
   overflow: hidden;
   box-shadow: 0 6px 0 #e9eddf;
 }
-.test-preview {
+.featured-preview {
   padding: 23px 24px 17px;
   background: #f0f1df;
   display: flex;
@@ -173,7 +173,7 @@ svg {
   justify-content: center;
   align-items: center;
 }
-.test-preview .artwork {
+.featured-preview .artwork {
   max-width: 280px;
   width: 100%;
   border-radius: 19px;
@@ -186,7 +186,7 @@ svg {
   font-size: 11px;
   letter-spacing: 0.4px;
 }
-.test-copy {
+.featured-copy {
   padding: 30px;
   display: flex;
   flex-direction: column;
@@ -201,11 +201,11 @@ svg {
   padding: 5px 10px;
   border-radius: 8px;
 }
-.test-copy h2 {
+.featured-copy h2 {
   font-size: 25px;
   margin: 15px 0 10px;
 }
-.test-copy p {
+.featured-copy p {
   font-size: 14px;
   color: #7d8174;
   line-height: 1.85;
@@ -756,10 +756,10 @@ dialog p {
   .welcome {
     padding-top: 48px;
   }
-  .test-card {
+  .featured-card {
     grid-template-columns: 42% 58%;
   }
-  .test-copy {
+  .featured-copy {
     padding: 34px 38px;
   }
   .catalog-grid {
@@ -784,7 +784,7 @@ dialog p {
     max-width: 760px;
     margin: auto;
   }
-  .test-preview .artwork {
+  .featured-preview .artwork {
     max-width: 250px;
   }
 }
@@ -795,10 +795,10 @@ dialog p {
   .welcome h1 {
     font-size: 34px;
   }
-  .test-copy {
+  .featured-copy {
     padding: 25px;
   }
-  .test-copy h2 {
+  .featured-copy h2 {
     font-size: 23px;
   }
 }
@@ -839,22 +839,22 @@ dialog p {
   .mobile-break {
     display: block;
   }
-  .test-card {
+  .featured-card {
     grid-template-columns: 1fr;
   }
-  .test-preview {
+  .featured-preview {
     padding: 20px;
   }
-  .test-preview .artwork {
+  .featured-preview .artwork {
     max-width: 220px;
   }
-  .test-copy {
+  .featured-copy {
     padding: 23px;
   }
-  .test-copy p br {
+  .featured-copy p br {
     display: none;
   }
-  .test-copy h2 {
+  .featured-copy h2 {
     font-size: 23px;
     margin-top: 12px;
   }
@@ -974,5 +974,58 @@ dialog p {
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* A scrollable, fixed-size palette keeps 25 colors readable on a portrait tablet. */
+.palette {
+  position: relative;
+  justify-content: flex-start;
+  overflow-x: auto;
+  padding: 14px 7px 14px;
+  margin-top: 5px;
+  scrollbar-width: thin;
+  scrollbar-color: #b5c5a9 transparent;
+}
+.color-chip {
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  max-width: none;
+  aspect-ratio: auto;
+  border-radius: 14px;
+  font-size: 16px;
+}
+.step-count {
+  font-size: 11px;
+  color: #718067;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.featured-copy h2 {
+  word-break: keep-all;
+}
+.featured-preview .artwork {
+  max-width: 260px;
+}
+.catalog-card:not(:disabled) {
+  border: 2px solid #82a285;
+  background: #f5f8eb;
+}
+.catalog-card:not(:disabled):hover {
+  background: #ebf1df;
+}
+@media (max-width: 599px) {
+  .featured-preview .artwork {
+    max-width: 240px;
+  }
+  .color-chip {
+    flex-basis: 44px;
+    width: 44px;
+    height: 44px;
+    font-size: 16px;
+  }
+  .current-instruction strong {
+    font-size: 12px;
   }
 }
