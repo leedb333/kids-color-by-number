@@ -1,0 +1,19 @@
+{
+  "id": "/kids-color-by-number/",
+  "name": "순서대로 색칠놀이",
+  "short_name": "색칠놀이",
+  "lang": "ko",
+  "start_url": "/kids-color-by-number/",
+  "scope": "/kids-color-by-number/",
+  "display": "standalone",
+  "background_color": "#f7f8ef",
+  "theme_color": "#f7f8ef",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
