@@ -184,7 +184,7 @@ test('all regions complete by touch, celebration appears, PNG is a real colored 
   const file = await readFile((await download.path())!)
   expect(file.subarray(0, 8).toString('hex')).toBe('89504e470d0a1a0a')
   expect(file.readUInt32BE(16)).toBe(1200)
-  expect(file.readUInt32BE(20)).toBe(1500)
+  expect(file.readUInt32BE(20)).toBe(1499)
   const pixel = await page.evaluate(async (data) => {
     const image = new Image()
     image.src = `data:image/png;base64,${data}`
@@ -195,15 +195,15 @@ test('all regions complete by touch, celebration appears, PNG is a real colored 
     const context = canvas.getContext('2d')!
     context.drawImage(image, 0, 0)
     return [
-      [843, 698],
-      [486, 845],
-      [378, 1290],
+      [753, 485],
+      [501, 825],
+      [369, 1283],
     ].map(([x, y]) => [...context.getImageData(x, y, 1, 1).data])
   }, file.toString('base64'))
   expect(pixel).toEqual([
-    [98, 200, 245, 255],
-    [255, 213, 44, 255],
-    [244, 82, 152, 255],
+    [124, 207, 252, 255],
+    [254, 208, 5, 255],
+    [252, 69, 137, 255],
   ])
   await page.reload()
   await page.getByRole('button', { name: '완성한 그림 보기' }).tap()
@@ -211,7 +211,7 @@ test('all regions complete by touch, celebration appears, PNG is a real colored 
     drawing.regions.length,
   )
   await page.getByRole('button', { name: '되돌리기' }).tap()
-  await expect(page.getByText('놀이터 황금색 차례예요')).toBeVisible()
+  await expect(page.getByText('미끄럼틀 분홍 차례예요')).toBeVisible()
   await expect(
     page.getByRole('button', { name: '완성하면 그림을 저장할 수 있어요' }),
   ).toBeDisabled()
@@ -355,4 +355,107 @@ test('legacy test progress is kept separate from the official puzzle', async ({
       storageKey(testDrawing),
     ),
   ).toEqual(['sun'])
+})
+
+test('source PNG outlines are preserved as actual SVG curves within one pixel', async ({
+  page,
+}) => {
+  await openDrawing(page)
+  const source = (
+    await readFile('public/assets/source/rainbow-child/rainbow-kid-line.png')
+  ).toString('base64')
+  const metrics = await page.evaluate(async (png) => {
+    const width = 800,
+      height = 999
+    async function pixels(src: string) {
+      const image = new Image()
+      image.src = src
+      await image.decode()
+      const canvas = document.createElement('canvas')
+      canvas.width = width
+      canvas.height = height
+      const ctx = canvas.getContext('2d')!
+      ctx.fillStyle = 'white'
+      ctx.fillRect(0, 0, width, height)
+      ctx.drawImage(image, 0, 0)
+      return ctx.getImageData(0, 0, width, height).data
+    }
+    const original = await pixels('data:image/png;base64,' + png)
+    const path = document.querySelector('[data-outline]')!.outerHTML
+    const vector = await pixels(
+      'data:image/svg+xml;base64,' +
+        btoa(
+          `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="999">${path}</svg>`,
+        ),
+    )
+    const a = new Uint8Array(width * height),
+      b = new Uint8Array(width * height)
+    let intersection = 0,
+      union = 0,
+      sourceInk = 0,
+      near = 0
+    for (let i = 0; i < a.length; i++) {
+      a[i] = Number(
+        Math.min(original[i * 4], original[i * 4 + 1], original[i * 4 + 2]) <
+          128,
+      )
+      b[i] = Number(vector[i * 4] < 128)
+      if (a[i] && b[i]) intersection++
+      if (a[i] || b[i]) union++
+      if (a[i]) sourceInk++
+    }
+    for (let i = 0; i < a.length; i++) {
+      if (!a[i]) continue
+      const x = i % width,
+        y = Math.floor(i / width)
+      let hit = false
+      for (let dy = -1; dy <= 1; dy++)
+        for (let dx = -1; dx <= 1; dx++) {
+          if (
+            x + dx >= 0 &&
+            x + dx < width &&
+            y + dy >= 0 &&
+            y + dy < height &&
+            b[i + dy * width + dx]
+          )
+            hit = true
+        }
+      if (hit) near++
+    }
+    return { iou: intersection / union, withinOnePixel: near / sourceInk }
+  }, source)
+  expect(metrics.iou).toBeGreaterThan(0.9)
+  expect(metrics.withinOnePixel).toBeGreaterThan(0.995)
+  expect(await page.locator('.canvas-panel svg image').count()).toBe(0)
+})
+
+test('revision one records are retained without replaying old geometry onto revision two', async ({
+  page,
+}) => {
+  const oldKey = storageKey({ ...drawing, revision: 1 })
+  await page.addInitScript(
+    ({ key, current }) => {
+      localStorage.setItem(
+        key,
+        JSON.stringify({
+          version: 1,
+          history: ['sky'],
+          updatedAt: new Date().toISOString(),
+        }),
+      )
+      localStorage.removeItem(current)
+    },
+    { key: oldKey, current: storageKey(drawing) },
+  )
+  await openDrawing(page)
+  await expect(page.locator('[data-painted=true]')).toHaveCount(0)
+  await tapRegion(page, 'sky')
+  await page.getByRole('button', { name: '처음부터', exact: true }).tap()
+  await page.getByRole('button', { name: '처음부터 칠하기' }).tap()
+  expect(
+    await page.evaluate(
+      (key) => JSON.parse(localStorage.getItem(key)!).history,
+      oldKey,
+    ),
+  ).toEqual(['sky'])
 })

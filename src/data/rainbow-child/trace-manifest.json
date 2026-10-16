@@ -1,0 +1,301 @@
+{
+  "generator": "potracer 0.0.4, opttolerance 0.15",
+  "sourceFiles": [
+    {
+      "name": "rainbow-kid-color.png",
+      "sha256": "585bedfdd875436b048a6f169c9e412b6c2b45be9e7041c0f0cebbca0d035080",
+      "width": 800,
+      "height": 999
+    },
+    {
+      "name": "rainbow-kid-line.png",
+      "sha256": "d576acb2bf432fdc53f5002e1028fed3855a4c3e0c060b61f3568b00fdbee641",
+      "width": 800,
+      "height": 999
+    }
+  ],
+  "threshold": 128,
+  "sourceComponents": 225,
+  "colorCount": 25,
+  "regionCount": 37,
+  "helperGroups": 57,
+  "sourceInkPixels": 110913,
+  "regions": [
+    {
+      "id": "sky",
+      "components": [
+        1, 2, 13, 34, 43, 55, 57, 58, 62, 64, 69, 72, 79, 80, 83, 92
+      ],
+      "mainComponents": [1, 2, 13, 34, 43, 57, 64, 69, 79, 80, 83, 92],
+      "area": 106992,
+      "labelRadius": 55.33
+    },
+    {
+      "id": "cloud-left",
+      "components": [4],
+      "mainComponents": [4],
+      "area": 19944,
+      "labelRadius": 44.65
+    },
+    {
+      "id": "cloud-right",
+      "components": [15],
+      "mainComponents": [15],
+      "area": 19733,
+      "labelRadius": 15.81
+    },
+    {
+      "id": "rainbow-red",
+      "components": [3],
+      "mainComponents": [3],
+      "area": 17983,
+      "labelRadius": 13.0
+    },
+    {
+      "id": "rainbow-orange",
+      "components": [5],
+      "mainComponents": [5],
+      "area": 18082,
+      "labelRadius": 15.23
+    },
+    {
+      "id": "rainbow-yellow",
+      "components": [7, 52, 67, 87],
+      "mainComponents": [7],
+      "area": 17785,
+      "labelRadius": 14.56
+    },
+    {
+      "id": "rainbow-green",
+      "components": [8],
+      "mainComponents": [8],
+      "area": 14521,
+      "labelRadius": 14.32
+    },
+    {
+      "id": "rainbow-blue",
+      "components": [10, 54, 60, 66, 68, 91, 98, 153, 156],
+      "mainComponents": [10],
+      "area": 20065,
+      "labelRadius": 13.42
+    },
+    {
+      "id": "rainbow-violet",
+      "components": [11],
+      "mainComponents": [11],
+      "area": 11788,
+      "labelRadius": 13.89
+    },
+    {
+      "id": "tree-crown-light",
+      "components": [6],
+      "mainComponents": [6],
+      "area": 10730,
+      "labelRadius": 15.26
+    },
+    {
+      "id": "tree-crown-dark",
+      "components": [9, 12, 19, 23],
+      "mainComponents": [9, 12, 19, 23],
+      "area": 23917,
+      "labelRadius": 15.23
+    },
+    {
+      "id": "tree-trunk",
+      "components": [
+        17, 21, 51, 61, 63, 114, 115, 118, 119, 122, 123, 125, 128, 142
+      ],
+      "mainComponents": [17],
+      "area": 7453,
+      "labelRadius": 14.76
+    },
+    {
+      "id": "bushes",
+      "components": [75, 76, 81, 82, 86, 96, 99, 120],
+      "mainComponents": [76, 81, 82, 86, 96, 99],
+      "area": 18746,
+      "labelRadius": 22.2
+    },
+    {
+      "id": "bush-front",
+      "components": [
+        88, 94, 100, 109, 116, 121, 124, 129, 137, 138, 139, 140, 141, 143, 144,
+        148, 152
+      ],
+      "mainComponents": [88, 94, 100, 109, 137, 140, 141, 143, 144],
+      "area": 14966,
+      "labelRadius": 31.91
+    },
+    {
+      "id": "grass-left",
+      "components": [
+        146, 147, 151, 155, 158, 159, 160, 163, 170, 177, 178, 179, 180, 181,
+        182, 183, 184, 185, 186, 191
+      ],
+      "mainComponents": [146, 158, 160, 163],
+      "area": 14637,
+      "labelRadius": 25.0
+    },
+    {
+      "id": "grass-right",
+      "components": [
+        112, 117, 126, 130, 131, 134, 135, 136, 149, 150, 154, 161, 164, 165,
+        166, 167, 168, 169, 171, 173, 187, 189, 190, 194, 196, 197, 198
+      ],
+      "mainComponents": [117, 126, 134, 149, 154, 161, 166, 167],
+      "area": 24735,
+      "labelRadius": 25.96
+    },
+    {
+      "id": "path",
+      "components": [
+        176, 188, 192, 193, 206, 207, 215, 218, 219, 221, 224, 225
+      ],
+      "mainComponents": [188, 192, 193, 215],
+      "area": 70931,
+      "labelRadius": 15.03
+    },
+    {
+      "id": "puddle-main",
+      "components": [208],
+      "mainComponents": [208],
+      "area": 44303,
+      "labelRadius": 28.02
+    },
+    {
+      "id": "puddle-left",
+      "components": [195],
+      "mainComponents": [195],
+      "area": 6865,
+      "labelRadius": 23.0
+    },
+    {
+      "id": "puddle-right",
+      "components": [200, 205],
+      "mainComponents": [200, 205],
+      "area": 8647,
+      "labelRadius": 17.0
+    },
+    {
+      "id": "hair-dark",
+      "components": [20, 24, 27, 28, 37],
+      "mainComponents": [20, 24, 27, 28],
+      "area": 14598,
+      "labelRadius": 16.76
+    },
+    {
+      "id": "hair-fringe",
+      "components": [14],
+      "mainComponents": [14],
+      "area": 11806,
+      "labelRadius": 18.87
+    },
+    {
+      "id": "face",
+      "components": [16, 18, 26, 31, 32, 35, 36, 38, 40, 49],
+      "mainComponents": [16],
+      "area": 18806,
+      "labelRadius": 25.0
+    },
+    {
+      "id": "hands",
+      "components": [39, 59, 84],
+      "mainComponents": [39, 59],
+      "area": 3811,
+      "labelRadius": 18.03
+    },
+    {
+      "id": "cheek",
+      "components": [25, 33],
+      "mainComponents": [25, 33],
+      "area": 1548,
+      "labelRadius": 16.76
+    },
+    {
+      "id": "coat-body",
+      "components": [48, 53, 56, 73, 74, 85, 106, 157],
+      "mainComponents": [48, 56, 73, 74],
+      "area": 32867,
+      "labelRadius": 33.97
+    },
+    {
+      "id": "left-sleeve",
+      "components": [70, 93],
+      "mainComponents": [70],
+      "area": 8862,
+      "labelRadius": 31.78
+    },
+    {
+      "id": "right-sleeve",
+      "components": [44],
+      "mainComponents": [44],
+      "area": 6411,
+      "labelRadius": 29.0
+    },
+    {
+      "id": "pockets",
+      "components": [110, 113, 127, 132],
+      "mainComponents": [110, 113, 127, 132],
+      "area": 4410,
+      "labelRadius": 18.25
+    },
+    {
+      "id": "pants-left",
+      "components": [172],
+      "mainComponents": [172],
+      "area": 5143,
+      "labelRadius": 27.46
+    },
+    {
+      "id": "pants-right",
+      "components": [174, 175],
+      "mainComponents": [174],
+      "area": 4465,
+      "labelRadius": 26.17
+    },
+    {
+      "id": "boot-left",
+      "components": [22, 65, 199, 202, 210],
+      "mainComponents": [202],
+      "area": 9103,
+      "labelRadius": 32.65
+    },
+    {
+      "id": "boot-right",
+      "components": [201, 203, 212],
+      "mainComponents": [203],
+      "area": 7680,
+      "labelRadius": 31.05
+    },
+    {
+      "id": "slide-roof",
+      "components": [
+        29, 30, 41, 42, 45, 46, 47, 50, 71, 77, 78, 102, 108, 111, 133, 145
+      ],
+      "mainComponents": [29, 30],
+      "area": 17446,
+      "labelRadius": 20.25
+    },
+    {
+      "id": "slide-body",
+      "components": [89, 90, 95, 97, 103, 104, 105, 107, 162],
+      "mainComponents": [89, 90],
+      "area": 13503,
+      "labelRadius": 17.46
+    },
+    {
+      "id": "slide-inner",
+      "components": [101],
+      "mainComponents": [101],
+      "area": 5882,
+      "labelRadius": 18.0
+    },
+    {
+      "id": "foreground-bush",
+      "components": [204, 209, 211, 213, 214, 216, 217, 220, 222, 223],
+      "mainComponents": [204],
+      "area": 28696,
+      "labelRadius": 15.23
+    }
+  ]
+}

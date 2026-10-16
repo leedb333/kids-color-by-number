@@ -1,4 +1,7 @@
 import { describe, expect, it } from 'vitest'
+import { readFileSync } from 'node:fs'
+import { createHash } from 'node:crypto'
+import manifest from './trace-manifest.json'
 import { rainbowChild as drawing } from './index'
 import {
   drawings,
@@ -19,7 +22,7 @@ const ordered = drawing.colors.flatMap((color) =>
 )
 
 describe('official rainbow puzzle', () => {
-  it('is the featured playable design with 25 colors and 43 broad regions', () => {
+  it('is the featured playable design with 25 colors and 37 source-traced regions', () => {
     expect(drawing.kind).toBe('official')
     expect(featuredDrawing).toBe(drawing)
     expect(drawings[drawing.id]).toBe(drawing)
@@ -31,8 +34,8 @@ describe('official rainbow puzzle', () => {
     expect(
       officialCatalog.find((item) => item.id === drawing.id)?.colorCount,
     ).toBe(drawing.colors.length)
-    expect(drawing.regions).toHaveLength(43)
-    expect(new Set(drawing.regions.map((region) => region.id)).size).toBe(43)
+    expect(drawing.regions).toHaveLength(37)
+    expect(new Set(drawing.regions.map((region) => region.id)).size).toBe(37)
     for (const path of [...drawing.regions, ...(drawing.decorations ?? [])]) {
       expect(path.d).toMatch(/^M[MmZzLlHhVvCcSsQqTtAa0-9eE ,.+-]+$/)
     }
@@ -59,7 +62,7 @@ describe('official rainbow puzzle', () => {
         history = paint(drawing, history, region.id)
       }
     }
-    expect(history).toHaveLength(43)
+    expect(history).toHaveLength(37)
     expect(progress(drawing, history)).toBe(100)
     expect(activeColor(drawing, history)).toBeUndefined()
   })
@@ -79,7 +82,7 @@ describe('official rainbow puzzle', () => {
     expect(decodeProgress(drawing, raw)?.history).toEqual(history)
     expect(storageKey(drawing)).not.toBe(storageKey(testDrawing))
     expect(storageKey(drawing)).not.toBe(
-      storageKey({ ...drawing, revision: 2 }),
+      storageKey({ ...drawing, revision: drawing.revision + 1 }),
     )
   })
   it('keeps small decorative trim out of the playable targets', () => {
@@ -95,4 +98,26 @@ describe('official rainbow puzzle', () => {
         ).toBe(true)
     }
   })
+})
+
+it('keeps source provenance and an isolated geometry revision', () => {
+  expect(drawing.revision).toBe(2)
+  expect(drawing.viewBox).toEqual([0, 0, 800, 999])
+  expect(drawing.outlinePath).toMatch(/^M/)
+  expect(drawing.outlinePath).not.toMatch(/data:image|<image|base64/)
+  expect(manifest.regionCount).toBe(drawing.regions.length)
+  expect(manifest.colorCount).toBe(drawing.colors.length)
+  const components = manifest.regions.flatMap((region) => region.components)
+  expect(new Set(components).size).toBe(manifest.sourceComponents)
+  expect(components).toHaveLength(manifest.sourceComponents)
+  for (const source of manifest.sourceFiles) {
+    const bytes = readFileSync(
+      `public/assets/source/rainbow-child/${source.name}`,
+    )
+    expect(createHash('sha256').update(bytes).digest('hex')).toBe(source.sha256)
+    expect(bytes.readUInt32BE(16)).toBe(source.width)
+    expect(bytes.readUInt32BE(20)).toBe(source.height)
+  }
+  for (const region of manifest.regions)
+    expect(region.labelRadius).toBeGreaterThanOrEqual(12)
 })

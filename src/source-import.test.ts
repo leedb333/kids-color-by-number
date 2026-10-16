@@ -53,8 +53,8 @@ function fixture() {
 it('copies supplied originals byte-for-byte, records checksums, and refuses overwrite', () => {
   const { png, run, target } = fixture()
   expect(run().status).toBe(0)
-  expect(readFileSync(join(target, 'color-reference.png'))).toEqual(png)
-  expect(readFileSync(join(target, 'outline-reference.png'))).toEqual(png)
+  expect(readFileSync(join(target, 'rainbow-kid-color.png'))).toEqual(png)
+  expect(readFileSync(join(target, 'rainbow-kid-line.png'))).toEqual(png)
   const metadata = JSON.parse(
     readFileSync(join(target, 'sources.json'), 'utf8'),
   )
@@ -64,12 +64,12 @@ it('copies supplied originals byte-for-byte, records checksums, and refuses over
     sha256: createHash('sha256').update(png).digest('hex'),
   })
   expect(run().status).not.toBe(0)
-  expect(readFileSync(join(target, 'color-reference.png'))).toEqual(png)
+  expect(readFileSync(join(target, 'rainbow-kid-color.png'))).toEqual(png)
 })
 it('validates both PNGs before copying either input', () => {
   const { outline, run, target } = fixture()
   writeFileSync(outline, 'This is not a PNG')
   expect(run().status).not.toBe(0)
-  expect(existsSync(join(target, 'color-reference.png'))).toBe(false)
+  expect(existsSync(join(target, 'rainbow-kid-color.png'))).toBe(false)
   expect(existsSync(join(target, 'sources.json'))).toBe(false)
 })

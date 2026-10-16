@@ -61,5 +61,13 @@ self.addEventListener('fetch', event => {
       },
     },
   ],
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: (id) =>
+          id.includes('/src/data/rainbow-child/') ? 'rainbow-child' : undefined,
+      },
+    },
+  },
   test: { include: ['src/**/*.test.ts'] },
 })

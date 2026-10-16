@@ -22,7 +22,7 @@ const target = resolve(
   dirname(fileURLToPath(import.meta.url)),
   '../public/assets/source/rainbow-child',
 )
-const names = ['color-reference.png', 'outline-reference.png']
+const names = ['rainbow-kid-color.png', 'rainbow-kid-line.png']
 const entries = paths.map((path, index) => {
   const bytes = readFileSync(path)
   if (
