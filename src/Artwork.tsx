@@ -50,6 +50,7 @@ export const Artwork = forwardRef<SVGSVGElement, Props>(function Artwork(
               data-painted={filled}
               data-current={target}
               data-hint={region.id === hintId}
+              fillRule={region.fillRule}
               fill={filled ? color.hex : '#fffefb'}
               stroke={drawing.strokeColor ?? '#514c43'}
               strokeWidth={drawing.strokeWidth ?? 3}
@@ -91,13 +92,46 @@ export const Artwork = forwardRef<SVGSVGElement, Props>(function Artwork(
             stroke={item.stroke}
             fill={
               item.paintWith && !preview && !painted.has(item.paintWith)
-                ? '#fffefb'
+                ? 'none'
                 : (item.fill ?? 'none')
             }
+            fillRule={item.fillRule}
             strokeWidth={item.strokeWidth ?? drawing.strokeWidth ?? 3}
           />
         ))}
       </g>
+      {drawing.outlinePath && (
+        <path
+          data-outline="true"
+          d={drawing.outlinePath}
+          fill="#141414"
+          fillRule="evenodd"
+          pointerEvents="none"
+          aria-hidden="true"
+        />
+      )}
+      {drawing.outlinePath &&
+        drawing.regions
+          .filter(
+            (region) =>
+              !preview &&
+              !painted.has(region.id) &&
+              (region.colorId === activeId || region.id === hintId),
+          )
+          .map((region) => (
+            <path
+              key={`guide-${region.id}`}
+              data-guide="true"
+              d={region.d}
+              fill="none"
+              fillRule={region.fillRule}
+              pointerEvents="none"
+              stroke={region.id === hintId ? '#2e8357' : '#b37718'}
+              strokeWidth={region.id === hintId ? 5 : 3}
+              strokeDasharray="8 7"
+              opacity="0.85"
+            />
+          ))}
       {drawing.regions
         .filter((region) => !preview && !painted.has(region.id))
         .map((region) => (

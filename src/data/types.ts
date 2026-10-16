@@ -9,6 +9,7 @@ export interface Region {
   colorId: number
   d: string
   label: [number, number]
+  fillRule?: 'evenodd' | 'nonzero'
 }
 export interface Drawing {
   id: string
@@ -21,11 +22,15 @@ export interface Drawing {
   labelSize?: number
   strokeColor?: string
   strokeWidth?: number
-  decorations?: {
-    d: string
-    stroke: string
-    fill?: string
-    strokeWidth?: number
-    paintWith?: string
-  }[]
+  outlinePath?: string
+  decorations?: Decoration[]
+}
+
+export interface Decoration {
+  d: string
+  stroke: string
+  fill?: string
+  strokeWidth?: number
+  paintWith?: string
+  fillRule?: 'evenodd' | 'nonzero'
 }
