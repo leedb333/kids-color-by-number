@@ -1,0 +1,17 @@
+{
+  "drawingId": "police-car-robot",
+  "files": [
+    {
+      "file": "color-reference.png",
+      "sha256": "756b52053177aa7220785fdab7145250feb3d38eb7beba67c798c7a5e274d504",
+      "width": 800,
+      "height": 999
+    },
+    {
+      "file": "line-reference.png",
+      "sha256": "52214b0c1aebbea8d26c40296f28849fe7bf5ef79fa4976fdc2880f800e0a54d",
+      "width": 800,
+      "height": 999
+    }
+  ]
+}

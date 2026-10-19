@@ -1,0 +1,765 @@
+{
+  "sources": {
+    "color-reference.png": "756b52053177aa7220785fdab7145250feb3d38eb7beba67c798c7a5e274d504",
+    "line-reference.png": "52214b0c1aebbea8d26c40296f28849fe7bf5ef79fa4976fdc2880f800e0a54d"
+  },
+  "sourceComponents": 183,
+  "threshold": 128,
+  "palette": [
+    {
+      "id": 1,
+      "name": "배경 하늘색",
+      "seed": 1
+    },
+    {
+      "id": 2,
+      "name": "순백색",
+      "seed": 2,
+      "hex": "#FFFFFF"
+    },
+    {
+      "id": 3,
+      "name": "로봇 얼굴 연파랑",
+      "seed": 65
+    },
+    {
+      "id": 4,
+      "name": "앞유리 하늘색",
+      "seed": 7
+    },
+    {
+      "id": 5,
+      "name": "차창 연파랑",
+      "seed": 8
+    },
+    {
+      "id": 6,
+      "name": "옆유리 파랑",
+      "seed": 10
+    },
+    {
+      "id": 7,
+      "name": "경찰 파랑",
+      "seed": 4
+    },
+    {
+      "id": 8,
+      "name": "경광등 빨강",
+      "seed": 3
+    },
+    {
+      "id": 9,
+      "name": "미소 분홍",
+      "seed": 84
+    },
+    {
+      "id": 10,
+      "name": "별 노랑",
+      "seed": 86
+    },
+    {
+      "id": 11,
+      "name": "화살표 노랑",
+      "seed": 54
+    },
+    {
+      "id": 12,
+      "name": "문 배지 금빛",
+      "seed": 28
+    },
+    {
+      "id": 13,
+      "name": "전조등 연노랑",
+      "seed": 30
+    },
+    {
+      "id": 14,
+      "name": "전조등 호박색",
+      "seed": 31
+    },
+    {
+      "id": 15,
+      "name": "이마 배지 노랑",
+      "seed": 59
+    },
+    {
+      "id": 16,
+      "name": "바퀴 은회색",
+      "seed": 42
+    },
+    {
+      "id": 17,
+      "name": "중심축 연회색",
+      "seed": 49
+    },
+    {
+      "id": 18,
+      "name": "다리 밝은 회색",
+      "seed": 153
+    },
+    {
+      "id": 19,
+      "name": "관절 회색",
+      "seed": 106
+    },
+    {
+      "id": 20,
+      "name": "팔꿈치 진회색",
+      "seed": 121
+    },
+    {
+      "id": 21,
+      "name": "허리 청회색",
+      "seed": 124
+    },
+    {
+      "id": 22,
+      "name": "뒤 범퍼 회색",
+      "seed": 40
+    },
+    {
+      "id": 23,
+      "name": "앞 범퍼 회색",
+      "seed": 45
+    },
+    {
+      "id": 24,
+      "name": "턱 청회색",
+      "seed": 77
+    },
+    {
+      "id": 25,
+      "name": "타이어 회색",
+      "seed": 38
+    },
+    {
+      "id": 26,
+      "name": "헬멧 먹색",
+      "seed": 58
+    },
+    {
+      "id": 27,
+      "name": "타이어 먹색",
+      "seed": 36
+    },
+    {
+      "id": 28,
+      "name": "윤곽 검정",
+      "seed": 99,
+      "hex": "#000000"
+    }
+  ],
+  "regions": [
+    {
+      "component": 1,
+      "id": "background",
+      "colorId": 1
+    },
+    {
+      "component": 2,
+      "id": "car-lightbar-white",
+      "colorId": 2
+    },
+    {
+      "component": 3,
+      "id": "car-lightbar-red",
+      "colorId": 8
+    },
+    {
+      "component": 4,
+      "id": "car-lightbar-blue",
+      "colorId": 7
+    },
+    {
+      "component": 5,
+      "id": "car-roof-frame"
+    },
+    {
+      "component": 7,
+      "id": "car-windshield",
+      "colorId": 4
+    },
+    {
+      "component": 8,
+      "id": "car-window-front",
+      "colorId": 5
+    },
+    {
+      "component": 10,
+      "id": "car-window-rear",
+      "colorId": 6
+    },
+    {
+      "component": 15,
+      "id": "car-mirror-left"
+    },
+    {
+      "component": 16,
+      "id": "car-mirror-right"
+    },
+    {
+      "component": 18,
+      "id": "car-fender-rear"
+    },
+    {
+      "component": 19,
+      "id": "car-door-rear",
+      "colorId": 2
+    },
+    {
+      "component": 21,
+      "id": "car-hood-left"
+    },
+    {
+      "component": 22,
+      "id": "car-hood-center"
+    },
+    {
+      "component": 23,
+      "id": "car-door-front",
+      "colorId": 2
+    },
+    {
+      "component": 24,
+      "id": "car-hood-right"
+    },
+    {
+      "component": 27,
+      "id": "car-tail-light",
+      "colorId": 8
+    },
+    {
+      "component": 28,
+      "id": "car-door-star",
+      "colorId": 12
+    },
+    {
+      "component": 29,
+      "id": "car-headlight-left-trim"
+    },
+    {
+      "component": 30,
+      "id": "car-headlight-left",
+      "colorId": 13
+    },
+    {
+      "component": 31,
+      "id": "car-headlight-right-trim",
+      "colorId": 14
+    },
+    {
+      "component": 32,
+      "id": "car-grille"
+    },
+    {
+      "component": 34,
+      "id": "car-headlight-right",
+      "colorId": 13
+    },
+    {
+      "component": 36,
+      "id": "car-tire-rear-inner",
+      "colorId": 27
+    },
+    {
+      "component": 37,
+      "id": "car-headlight-right-bulb"
+    },
+    {
+      "component": 38,
+      "id": "car-tire-front",
+      "colorId": 25
+    },
+    {
+      "component": 39,
+      "id": "car-tire-rear"
+    },
+    {
+      "component": 40,
+      "id": "car-bumper-rear",
+      "colorId": 22
+    },
+    {
+      "component": 41,
+      "id": "car-wheel-rear-rim"
+    },
+    {
+      "component": 42,
+      "id": "car-wheel-front-rim",
+      "colorId": 16
+    },
+    {
+      "component": 45,
+      "id": "car-bumper-front",
+      "colorId": 23
+    },
+    {
+      "component": 48,
+      "id": "car-wheel-rear-hub"
+    },
+    {
+      "component": 49,
+      "id": "car-wheel-front-hub",
+      "colorId": 17
+    },
+    {
+      "component": 50,
+      "id": "car-bumper-left-inset"
+    },
+    {
+      "component": 51,
+      "id": "car-bumper-right-inset"
+    },
+    {
+      "component": 52,
+      "id": "car-running-board"
+    },
+    {
+      "component": 53,
+      "id": "car-tire-left-back"
+    },
+    {
+      "component": 54,
+      "id": "transformation-arrow",
+      "colorId": 11
+    },
+    {
+      "component": 55,
+      "id": "robot-lightbar-blue",
+      "colorId": 7
+    },
+    {
+      "component": 56,
+      "id": "robot-lightbar-white",
+      "colorId": 2
+    },
+    {
+      "component": 57,
+      "id": "robot-lightbar-red",
+      "colorId": 8
+    },
+    {
+      "component": 58,
+      "id": "robot-helmet",
+      "colorId": 26
+    },
+    {
+      "component": 59,
+      "id": "robot-helmet-shield",
+      "colorId": 15
+    },
+    {
+      "component": 60,
+      "id": "robot-head-left-panel",
+      "colorId": 2
+    },
+    {
+      "component": 61,
+      "id": "robot-ear-left",
+      "colorId": 7
+    },
+    {
+      "component": 62,
+      "id": "robot-head-right-panel",
+      "colorId": 2
+    },
+    {
+      "component": 63,
+      "id": "robot-ear-left-rim"
+    },
+    {
+      "component": 64,
+      "id": "robot-ear-left-hub"
+    },
+    {
+      "component": 65,
+      "id": "robot-face",
+      "colorId": 3
+    },
+    {
+      "component": 66,
+      "id": "robot-shoulder-left-plate",
+      "colorId": 2
+    },
+    {
+      "component": 68,
+      "id": "robot-ear-right",
+      "colorId": 7
+    },
+    {
+      "component": 70,
+      "id": "robot-shoulder-left-back"
+    },
+    {
+      "component": 74,
+      "id": "robot-shoulder-left-window"
+    },
+    {
+      "component": 76,
+      "id": "robot-fist-right"
+    },
+    {
+      "component": 77,
+      "id": "robot-jaw-left",
+      "colorId": 24
+    },
+    {
+      "component": 78,
+      "id": "robot-fist-right-thumb"
+    },
+    {
+      "component": 81,
+      "id": "robot-shoulder-right-plate",
+      "colorId": 2
+    },
+    {
+      "component": 84,
+      "id": "robot-tongue",
+      "colorId": 9
+    },
+    {
+      "component": 85,
+      "id": "robot-shoulder-right-window"
+    },
+    {
+      "component": 86,
+      "id": "robot-shoulder-left-star",
+      "colorId": 10
+    },
+    {
+      "component": 87,
+      "id": "robot-chest-frame"
+    },
+    {
+      "component": 88,
+      "id": "robot-upper-arm-left",
+      "colorId": 2
+    },
+    {
+      "component": 89,
+      "id": "robot-grille-upper"
+    },
+    {
+      "component": 91,
+      "id": "robot-arm-left-wheel-rim"
+    },
+    {
+      "component": 92,
+      "id": "robot-forearm-right-panel",
+      "colorId": 2
+    },
+    {
+      "component": 93,
+      "id": "robot-headlight-left",
+      "colorId": 13
+    },
+    {
+      "component": 94,
+      "id": "robot-arm-left-wheel-hub"
+    },
+    {
+      "component": 96,
+      "id": "robot-forearm-right-dark"
+    },
+    {
+      "component": 97,
+      "id": "robot-shoulder-left-joint"
+    },
+    {
+      "component": 98,
+      "id": "robot-grille"
+    },
+    {
+      "component": 99,
+      "id": "robot-arm-left-tire",
+      "colorId": 28
+    },
+    {
+      "component": 100,
+      "id": "robot-shoulder-right-joint"
+    },
+    {
+      "component": 101,
+      "id": "star-left",
+      "colorId": 10
+    },
+    {
+      "component": 102,
+      "id": "robot-shoulder-right-star",
+      "colorId": 10
+    },
+    {
+      "component": 104,
+      "id": "robot-headlight-right",
+      "colorId": 13
+    },
+    {
+      "component": 106,
+      "id": "robot-elbow-left",
+      "colorId": 19
+    },
+    {
+      "component": 107,
+      "id": "robot-forearm-right-side"
+    },
+    {
+      "component": 110,
+      "id": "robot-chest-left"
+    },
+    {
+      "component": 111,
+      "id": "robot-forearm-left-top"
+    },
+    {
+      "component": 112,
+      "id": "robot-forearm-left-panel",
+      "colorId": 2
+    },
+    {
+      "component": 114,
+      "id": "robot-chest-plate",
+      "colorId": 2
+    },
+    {
+      "component": 115,
+      "id": "robot-chest-right"
+    },
+    {
+      "component": 116,
+      "id": "robot-chest-star",
+      "colorId": 10
+    },
+    {
+      "component": 117,
+      "id": "robot-elbow-right"
+    },
+    {
+      "component": 118,
+      "id": "robot-chest-lower-trim"
+    },
+    {
+      "component": 119,
+      "id": "robot-torso-left-joint"
+    },
+    {
+      "component": 120,
+      "id": "robot-forearm-left-blue",
+      "colorId": 7
+    },
+    {
+      "component": 121,
+      "id": "robot-elbow-right-joint",
+      "colorId": 20
+    },
+    {
+      "component": 122,
+      "id": "robot-forearm-right-cuff"
+    },
+    {
+      "component": 123,
+      "id": "robot-forearm-left-back"
+    },
+    {
+      "component": 124,
+      "id": "robot-waist-left",
+      "colorId": 21
+    },
+    {
+      "component": 126,
+      "id": "robot-hip-left-red",
+      "colorId": 8
+    },
+    {
+      "component": 130,
+      "id": "robot-fist-left"
+    },
+    {
+      "component": 131,
+      "id": "robot-hip-left-base"
+    },
+    {
+      "component": 132,
+      "id": "robot-waist"
+    },
+    {
+      "component": 133,
+      "id": "robot-hip-right-red",
+      "colorId": 8
+    },
+    {
+      "component": 134,
+      "id": "robot-fist-left-knuckle-upper"
+    },
+    {
+      "component": 135,
+      "id": "robot-waist-belt"
+    },
+    {
+      "component": 137,
+      "id": "robot-thigh-left",
+      "colorId": 2
+    },
+    {
+      "component": 139,
+      "id": "robot-fist-left-knuckle-middle"
+    },
+    {
+      "component": 140,
+      "id": "star-right",
+      "colorId": 10
+    },
+    {
+      "component": 141,
+      "id": "robot-thigh-right",
+      "colorId": 2
+    },
+    {
+      "component": 144,
+      "id": "robot-fist-left-knuckle-lower"
+    },
+    {
+      "component": 146,
+      "id": "robot-knee-left"
+    },
+    {
+      "component": 147,
+      "id": "robot-knee-right"
+    },
+    {
+      "component": 148,
+      "id": "robot-shin-left-side",
+      "colorId": 2
+    },
+    {
+      "component": 149,
+      "id": "robot-shin-left-blue-upper",
+      "colorId": 7
+    },
+    {
+      "component": 150,
+      "id": "robot-shin-right-blue-upper",
+      "colorId": 7
+    },
+    {
+      "component": 152,
+      "id": "robot-shin-left-outer"
+    },
+    {
+      "component": 153,
+      "id": "robot-shin-right-inner",
+      "colorId": 18
+    },
+    {
+      "component": 155,
+      "id": "robot-knee-right-cap"
+    },
+    {
+      "component": 156,
+      "id": "robot-shin-left-back-tire"
+    },
+    {
+      "component": 157,
+      "id": "robot-tire-right"
+    },
+    {
+      "component": 158,
+      "id": "star-bottom-left",
+      "colorId": 10
+    },
+    {
+      "component": 159,
+      "id": "robot-shin-left-front",
+      "colorId": 2
+    },
+    {
+      "component": 161,
+      "id": "robot-shin-left-back"
+    },
+    {
+      "component": 163,
+      "id": "robot-shin-right-front",
+      "colorId": 2
+    },
+    {
+      "component": 164,
+      "id": "robot-wheel-right-outer"
+    },
+    {
+      "component": 165,
+      "id": "robot-shin-left-trim"
+    },
+    {
+      "component": 166,
+      "id": "robot-shin-right-blue-lower",
+      "colorId": 7
+    },
+    {
+      "component": 167,
+      "id": "robot-shin-left-blue-lower",
+      "colorId": 7
+    },
+    {
+      "component": 168,
+      "id": "robot-wheel-right-rim"
+    },
+    {
+      "component": 169,
+      "id": "robot-wheel-right-hub"
+    },
+    {
+      "component": 170,
+      "id": "robot-foot-left-upper"
+    },
+    {
+      "component": 171,
+      "id": "robot-foot-left-toe-border",
+      "colorId": 2
+    },
+    {
+      "component": 172,
+      "id": "robot-foot-right-upper"
+    },
+    {
+      "component": 173,
+      "id": "robot-foot-right-toe-border",
+      "colorId": 2
+    },
+    {
+      "component": 174,
+      "id": "robot-foot-left-inner"
+    },
+    {
+      "component": 175,
+      "id": "robot-foot-right-inner"
+    },
+    {
+      "component": 176,
+      "id": "robot-ankle-left-back"
+    },
+    {
+      "component": 180,
+      "id": "robot-heel-right-base"
+    },
+    {
+      "component": 181,
+      "id": "robot-heel-right-outer"
+    },
+    {
+      "component": 182,
+      "id": "robot-foot-right-toe"
+    },
+    {
+      "component": 183,
+      "id": "robot-foot-left-toe"
+    }
+  ],
+  "colorSplits": [
+    {
+      "id": "car-headlight-left-bulb",
+      "parentComponent": 30,
+      "box": [99, 196, 127, 231],
+      "minChannel": 245,
+      "colorId": 2
+    }
+  ]
+}

@@ -65,7 +65,11 @@ self.addEventListener('fetch', event => {
     rollupOptions: {
       output: {
         manualChunks: (id) =>
-          id.includes('/src/data/rainbow-child/') ? 'rainbow-child' : undefined,
+          id.includes('/src/data/police-car-robot/')
+            ? 'police-car-robot'
+            : id.includes('/src/data/rainbow-child/')
+              ? 'rainbow-child'
+              : undefined,
       },
     },
   },

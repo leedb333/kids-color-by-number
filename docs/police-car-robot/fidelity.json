@@ -1,0 +1,47 @@
+{
+  "full": {
+    "iou": 0.9456010034986436,
+    "withinOnePixel": 0.9999844550322947,
+    "sourceInk": 128659
+  },
+  "carFace": {
+    "iou": 0.9522297589839803,
+    "withinOnePixel": 1,
+    "sourceInk": 6737
+  },
+  "robotFace": {
+    "iou": 0.9468719923002887,
+    "withinOnePixel": 1,
+    "sourceInk": 5053
+  },
+  "leftArm": {
+    "iou": 0.9426457975986278,
+    "withinOnePixel": 1,
+    "sourceInk": 18087
+  },
+  "rightArm": {
+    "iou": 0.9460965020070451,
+    "withinOnePixel": 0.9999159310634721,
+    "sourceInk": 11895
+  },
+  "legs": {
+    "iou": 0.9476121066620938,
+    "withinOnePixel": 1,
+    "sourceInk": 34025
+  },
+  "carFrontWheel": {
+    "iou": 0.9272080838323353,
+    "withinOnePixel": 0.9998055609566401,
+    "sourceInk": 5143
+  },
+  "carRearWheel": {
+    "iou": 0.9244254915896707,
+    "withinOnePixel": 1,
+    "sourceInk": 4081
+  },
+  "robotWheel": {
+    "iou": 0.9137195121951219,
+    "withinOnePixel": 1,
+    "sourceInk": 3147
+  }
+}

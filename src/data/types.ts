@@ -7,8 +7,12 @@ export interface PaintColor {
 export interface Region {
   id: string
   colorId: number
+  /** Explicit fill is independent from the ordered color-stage ID. */
+  fill?: string
   d: string
   label: [number, number]
+  labelSize?: number
+  touchRadius?: number
   fillRule?: 'evenodd' | 'nonzero'
 }
 export interface Drawing {
@@ -23,6 +27,9 @@ export interface Drawing {
   strokeColor?: string
   strokeWidth?: number
   outlinePath?: string
+  outlineColor?: string
+  paperColor?: string
+  maxZoom?: number
   decorations?: Decoration[]
 }
 
