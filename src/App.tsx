@@ -602,7 +602,7 @@ export default function App() {
     }
   }, [])
   return (
-    <div className="app-shell">
+    <div className={`app-shell${opened ? ' is-coloring' : ''}`}>
       <header className="site-header">
         <a
           className="brand"
