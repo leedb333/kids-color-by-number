@@ -73,10 +73,10 @@ describe('safe, versioned persistence', () => {
 })
 
 describe('drawing data contracts', () => {
-  it('clearly separates the test SVG from the five unavailable official designs', () => {
+  it('keeps the test SVG separate from all official catalog designs', () => {
     expect(drawing.kind).toBe('test')
     expect(officialCatalog.map((item) => item.colorCount)).toEqual([
-      25, 24, 30, 23, 27,
+      28, 25, 24, 30, 23, 27,
     ])
     expect(officialCatalog.map((item) => item.id)).not.toContain(drawing.id)
   })

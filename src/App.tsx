@@ -106,10 +106,11 @@ function Home({ onOpen }: { onOpen: (drawing: Drawing) => void }) {
             <span className="eyebrow">나의 색칠 그림책</span>
             <h2 id="catalog-title">어떤 그림을 좋아하나요?</h2>
           </div>
-          <span className="count-badge">5개 도안</span>
+          <span className="count-badge">{officialCatalog.length}개 도안</span>
         </div>
         <p className="catalog-note">
-          무지개 도안부터 시작해 보세요. 나머지 네 그림도 차례로 준비할게요.
+          무지개와 경찰차 로봇을 골라 보세요. 나머지 네 그림도 차례로
+          준비할게요.
         </p>
         <div className="catalog-grid">
           {officialCatalog.map((item) => (
@@ -177,6 +178,7 @@ function Coloring({
   const paletteRef = useRef<HTMLDivElement>(null)
   const stageRef = useRef<HTMLDivElement>(null)
   const hintTimer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
+  const maxZoom = drawing.maxZoom ?? 3
   const current = activeColor(drawing, history)
   const complete = !current
   const remaining = drawing.regions.filter(
@@ -230,9 +232,40 @@ function Coloring({
     clearTimeout(hintTimer.current)
     setHintId(region.id)
     setMessage(`${current!.id}번이 반짝반짝! 이곳을 눌러 보세요.`)
-    // Return to the full drawing so a hint is never hidden beyond a zoomed viewport.
-    setZoom(1)
-    stageRef.current?.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    // Small independent cells need a usable touch target; center them without painting.
+    const stage = stageRef.current
+    const svg = svgRef.current
+    const baseHeight = svg ? svg.getBoundingClientRect().height / zoom : 0
+    const scale = baseHeight / drawing.viewBox[3]
+    const targetZoom =
+      region.touchRadius && scale > 0
+        ? Math.min(
+            maxZoom,
+            Math.max(
+              1,
+              Math.ceil((48 / (2 * region.touchRadius * scale)) * 2) / 2,
+            ),
+          )
+        : 1
+    setZoom(targetZoom)
+    requestAnimationFrame(() => {
+      if (!stage) return
+      if (targetZoom === 1) {
+        stage.scrollTo({ top: 0, left: 0 })
+        return
+      }
+      const path = svgRef.current?.querySelector<SVGPathElement>(
+        `[data-region="${region.id}"]`,
+      )
+      const matrix = path?.getScreenCTM()
+      if (!matrix) return
+      const point = new DOMPoint(...region.label).matrixTransform(matrix)
+      const bounds = stage.getBoundingClientRect()
+      stage.scrollTo({
+        left: stage.scrollLeft + point.x - bounds.left - stage.clientWidth / 2,
+        top: stage.scrollTop + point.y - bounds.top - stage.clientHeight / 2,
+      })
+    })
     hintTimer.current = setTimeout(() => setHintId(undefined), 6000)
   }
 
@@ -414,8 +447,8 @@ function Coloring({
             </button>
             <button
               className="icon-button"
-              disabled={zoom >= 3}
-              onClick={() => setZoom((value) => Math.min(3, value + 0.5))}
+              disabled={zoom >= maxZoom}
+              onClick={() => setZoom((value) => Math.min(maxZoom, value + 0.5))}
               aria-label="확대"
             >
               ＋
@@ -465,8 +498,10 @@ function Coloring({
             : '완성하면 그림을 저장할 수 있어요'}
       </button>
       <p className="small-note">
-        작은 영역은 확대해서 칠해 보세요. · 저장된 기록은 이 브라우저에서 이어
-        할 수 있어요.
+        {drawing.id === 'police-car-robot'
+          ? '작은 영역은 힌트를 눌러 크게 볼 수 있어요.'
+          : '작은 영역은 확대해서 칠해 보세요.'}{' '}
+        · 저장된 기록은 이 브라우저에서 이어 할 수 있어요.
       </p>
       {resetOpen && (
         <Dialog

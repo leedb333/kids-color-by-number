@@ -1,0 +1,1632 @@
+{
+  "sources": [
+    {
+      "file": "color-reference.png",
+      "sha256": "756b52053177aa7220785fdab7145250feb3d38eb7beba67c798c7a5e274d504",
+      "width": 800,
+      "height": 999
+    },
+    {
+      "file": "line-reference.png",
+      "sha256": "52214b0c1aebbea8d26c40296f28849fe7bf5ef79fa4976fdc2880f800e0a54d",
+      "width": 800,
+      "height": 999
+    }
+  ],
+  "threshold": 128,
+  "sourceComponents": 183,
+  "touchRegions": 135,
+  "uniqueFlatColors": 28,
+  "regions": [
+    {
+      "id": "background",
+      "component": 1,
+      "colorId": 1,
+      "fill": "#40BBFD",
+      "area": 380693,
+      "label": [95, 423],
+      "radius": 95.51
+    },
+    {
+      "id": "car-lightbar-white",
+      "component": 2,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 1468,
+      "label": [383, 26],
+      "radius": 14.0
+    },
+    {
+      "id": "car-lightbar-red",
+      "component": 3,
+      "colorId": 8,
+      "fill": "#FC1A13",
+      "area": 2318,
+      "label": [441, 27],
+      "radius": 15.0
+    },
+    {
+      "id": "car-lightbar-blue",
+      "component": 4,
+      "colorId": 7,
+      "fill": "#0054D0",
+      "area": 1610,
+      "label": [332, 27],
+      "radius": 14.0
+    },
+    {
+      "id": "car-roof-frame",
+      "component": 5,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 6428,
+      "label": [466, 64],
+      "radius": 10.44
+    },
+    {
+      "id": "car-windshield",
+      "component": 7,
+      "colorId": 4,
+      "fill": "#73CBFC",
+      "area": 10863,
+      "label": [344, 92],
+      "radius": 28.6
+    },
+    {
+      "id": "car-window-front",
+      "component": 8,
+      "colorId": 5,
+      "fill": "#66C3FB",
+      "area": 2640,
+      "label": [498, 97],
+      "radius": 23.09
+    },
+    {
+      "id": "car-window-rear",
+      "component": 10,
+      "colorId": 6,
+      "fill": "#49B1FA",
+      "area": 3149,
+      "label": [572, 117],
+      "radius": 22.8
+    },
+    {
+      "id": "car-mirror-left",
+      "component": 15,
+      "colorId": 26,
+      "fill": "#222325",
+      "area": 575,
+      "label": [189, 129],
+      "radius": 11.4
+    },
+    {
+      "id": "car-mirror-right",
+      "component": 16,
+      "colorId": 26,
+      "fill": "#222325",
+      "area": 1316,
+      "label": [495, 141],
+      "radius": 15.0
+    },
+    {
+      "id": "car-fender-rear",
+      "component": 18,
+      "colorId": 27,
+      "fill": "#181819",
+      "area": 2979,
+      "label": [655, 166],
+      "radius": 22.14
+    },
+    {
+      "id": "car-door-rear",
+      "component": 19,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 5745,
+      "label": [596, 195],
+      "radius": 26.08
+    },
+    {
+      "id": "car-hood-left",
+      "component": 21,
+      "colorId": 24,
+      "fill": "#252E32",
+      "area": 1867,
+      "label": [137, 174],
+      "radius": 15.0
+    },
+    {
+      "id": "car-hood-center",
+      "component": 22,
+      "colorId": 24,
+      "fill": "#252E32",
+      "area": 6069,
+      "label": [224, 168],
+      "radius": 21.0
+    },
+    {
+      "id": "car-door-front",
+      "component": 23,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 6996,
+      "label": [500, 183],
+      "radius": 22.36
+    },
+    {
+      "id": "car-hood-right",
+      "component": 24,
+      "colorId": 27,
+      "fill": "#181819",
+      "area": 6704,
+      "label": [416, 179],
+      "radius": 24.7
+    },
+    {
+      "id": "car-tail-light",
+      "component": 27,
+      "colorId": 8,
+      "fill": "#FC1A13",
+      "area": 192,
+      "label": [688, 179],
+      "radius": 3.61
+    },
+    {
+      "id": "car-door-star",
+      "component": 28,
+      "colorId": 12,
+      "fill": "#FED305",
+      "area": 1459,
+      "label": [530, 218],
+      "radius": 15.62
+    },
+    {
+      "id": "car-headlight-left-trim",
+      "component": 29,
+      "colorId": 14,
+      "fill": "#FEB612",
+      "area": 317,
+      "label": [86, 213],
+      "radius": 5.0
+    },
+    {
+      "id": "car-headlight-left",
+      "component": 30,
+      "colorId": 13,
+      "fill": "#FEDE47",
+      "area": 944,
+      "label": [126, 226],
+      "radius": 7.0
+    },
+    {
+      "id": "car-headlight-right-trim",
+      "component": 31,
+      "colorId": 14,
+      "fill": "#FEB612",
+      "area": 829,
+      "label": [379, 204],
+      "radius": 10.77
+    },
+    {
+      "id": "car-grille",
+      "component": 32,
+      "colorId": 16,
+      "fill": "#B4B3B8",
+      "area": 4588,
+      "label": [275, 220],
+      "radius": 7.28
+    },
+    {
+      "id": "car-headlight-right",
+      "component": 34,
+      "colorId": 13,
+      "fill": "#FEDE47",
+      "area": 1685,
+      "label": [351, 205],
+      "radius": 10.0
+    },
+    {
+      "id": "car-tire-rear-inner",
+      "component": 36,
+      "colorId": 27,
+      "fill": "#181819",
+      "area": 1676,
+      "label": [604, 303],
+      "radius": 14.32
+    },
+    {
+      "id": "car-headlight-right-bulb",
+      "component": 37,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 349,
+      "label": [331, 217],
+      "radius": 10.0
+    },
+    {
+      "id": "car-tire-front",
+      "component": 38,
+      "colorId": 25,
+      "fill": "#2D2F33",
+      "area": 5638,
+      "label": [391, 320],
+      "radius": 15.65
+    },
+    {
+      "id": "car-tire-rear",
+      "component": 39,
+      "colorId": 25,
+      "fill": "#2D2F33",
+      "area": 2086,
+      "label": [647, 215],
+      "radius": 8.0
+    },
+    {
+      "id": "car-bumper-rear",
+      "component": 40,
+      "colorId": 22,
+      "fill": "#3B3F42",
+      "area": 1352,
+      "label": [692, 232],
+      "radius": 14.56
+    },
+    {
+      "id": "car-wheel-rear-rim",
+      "component": 41,
+      "colorId": 16,
+      "fill": "#B4B3B8",
+      "area": 1369,
+      "label": [648, 236],
+      "radius": 9.0
+    },
+    {
+      "id": "car-wheel-front-rim",
+      "component": 42,
+      "colorId": 16,
+      "fill": "#B4B3B8",
+      "area": 2226,
+      "label": [441, 306],
+      "radius": 10.05
+    },
+    {
+      "id": "car-bumper-front",
+      "component": 45,
+      "colorId": 23,
+      "fill": "#3D4145",
+      "area": 15374,
+      "label": [263, 278],
+      "radius": 28.23
+    },
+    {
+      "id": "car-wheel-rear-hub",
+      "component": 48,
+      "colorId": 16,
+      "fill": "#B4B3B8",
+      "area": 270,
+      "label": [647, 260],
+      "radius": 6.0
+    },
+    {
+      "id": "car-wheel-front-hub",
+      "component": 49,
+      "colorId": 17,
+      "fill": "#CAC9CD",
+      "area": 553,
+      "label": [444, 274],
+      "radius": 9.06
+    },
+    {
+      "id": "car-bumper-left-inset",
+      "component": 50,
+      "colorId": 16,
+      "fill": "#B4B3B8",
+      "area": 753,
+      "label": [108, 272],
+      "radius": 10.77
+    },
+    {
+      "id": "car-bumper-right-inset",
+      "component": 51,
+      "colorId": 16,
+      "fill": "#B4B3B8",
+      "area": 1012,
+      "label": [316, 279],
+      "radius": 11.0
+    },
+    {
+      "id": "car-running-board",
+      "component": 52,
+      "colorId": 25,
+      "fill": "#2D2F33",
+      "area": 1608,
+      "label": [498, 289],
+      "radius": 7.28
+    },
+    {
+      "id": "car-tire-left-back",
+      "component": 53,
+      "colorId": 27,
+      "fill": "#181819",
+      "area": 1418,
+      "label": [129, 316],
+      "radius": 11.0
+    },
+    {
+      "id": "transformation-arrow",
+      "component": 54,
+      "colorId": 11,
+      "fill": "#FEDA04",
+      "area": 4480,
+      "label": [272, 408],
+      "radius": 20.88
+    },
+    {
+      "id": "robot-lightbar-blue",
+      "component": 55,
+      "colorId": 7,
+      "fill": "#0054D0",
+      "area": 1904,
+      "label": [385, 372],
+      "radius": 16.0
+    },
+    {
+      "id": "robot-lightbar-white",
+      "component": 56,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 1239,
+      "label": [449, 378],
+      "radius": 15.0
+    },
+    {
+      "id": "robot-lightbar-red",
+      "component": 57,
+      "colorId": 8,
+      "fill": "#FC1A13",
+      "area": 1442,
+      "label": [512, 389],
+      "radius": 15.3
+    },
+    {
+      "id": "robot-helmet",
+      "component": 58,
+      "colorId": 26,
+      "fill": "#222325",
+      "area": 4032,
+      "label": [411, 416],
+      "radius": 20.1
+    },
+    {
+      "id": "robot-helmet-shield",
+      "component": 59,
+      "colorId": 15,
+      "fill": "#FED50D",
+      "area": 1546,
+      "label": [457, 421],
+      "radius": 20.25
+    },
+    {
+      "id": "robot-head-left-panel",
+      "component": 60,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 1416,
+      "label": [368, 418],
+      "radius": 12.53
+    },
+    {
+      "id": "robot-ear-left",
+      "component": 61,
+      "colorId": 7,
+      "fill": "#0054D0",
+      "area": 767,
+      "label": [350, 446],
+      "radius": 6.32
+    },
+    {
+      "id": "robot-head-right-panel",
+      "component": 62,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 822,
+      "label": [521, 442],
+      "radius": 8.6
+    },
+    {
+      "id": "robot-ear-left-rim",
+      "component": 63,
+      "colorId": 22,
+      "fill": "#3B3F42",
+      "area": 303,
+      "label": [332, 428],
+      "radius": 4.12
+    },
+    {
+      "id": "robot-ear-left-hub",
+      "component": 64,
+      "colorId": 22,
+      "fill": "#3B3F42",
+      "area": 167,
+      "label": [331, 448],
+      "radius": 4.0
+    },
+    {
+      "id": "robot-face",
+      "component": 65,
+      "colorId": 3,
+      "fill": "#BFE6FD",
+      "area": 5627,
+      "label": [445, 483],
+      "radius": 20.25
+    },
+    {
+      "id": "robot-shoulder-left-plate",
+      "component": 66,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 7524,
+      "label": [249, 568],
+      "radius": 17.89
+    },
+    {
+      "id": "robot-ear-right",
+      "component": 68,
+      "colorId": 7,
+      "fill": "#0054D0",
+      "area": 541,
+      "label": [536, 481],
+      "radius": 6.08
+    },
+    {
+      "id": "robot-shoulder-left-back",
+      "component": 70,
+      "colorId": 25,
+      "fill": "#2D2F33",
+      "area": 1531,
+      "label": [158, 518],
+      "radius": 9.22
+    },
+    {
+      "id": "robot-shoulder-left-window",
+      "component": 74,
+      "colorId": 6,
+      "fill": "#49B1FA",
+      "area": 1855,
+      "label": [248, 487],
+      "radius": 16.64
+    },
+    {
+      "id": "robot-fist-right",
+      "component": 76,
+      "colorId": 26,
+      "fill": "#222325",
+      "area": 3724,
+      "label": [711, 516],
+      "radius": 10.77
+    },
+    {
+      "id": "robot-jaw-left",
+      "component": 77,
+      "colorId": 24,
+      "fill": "#252E32",
+      "area": 976,
+      "label": [364, 496],
+      "radius": 13.89
+    },
+    {
+      "id": "robot-fist-right-thumb",
+      "component": 78,
+      "colorId": 22,
+      "fill": "#3B3F42",
+      "area": 493,
+      "label": [658, 495],
+      "radius": 9.22
+    },
+    {
+      "id": "robot-shoulder-right-plate",
+      "component": 81,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 3701,
+      "label": [619, 552],
+      "radius": 11.31
+    },
+    {
+      "id": "robot-tongue",
+      "component": 84,
+      "colorId": 9,
+      "fill": "#FC6362",
+      "area": 180,
+      "label": [434, 514],
+      "radius": 5.0
+    },
+    {
+      "id": "robot-shoulder-right-window",
+      "component": 85,
+      "colorId": 6,
+      "fill": "#49B1FA",
+      "area": 1242,
+      "label": [582, 536],
+      "radius": 17.49
+    },
+    {
+      "id": "robot-shoulder-left-star",
+      "component": 86,
+      "colorId": 10,
+      "fill": "#FED604",
+      "area": 1110,
+      "label": [221, 539],
+      "radius": 13.42
+    },
+    {
+      "id": "robot-chest-frame",
+      "component": 87,
+      "colorId": 22,
+      "fill": "#3B3F42",
+      "area": 3798,
+      "label": [518, 554],
+      "radius": 10.77
+    },
+    {
+      "id": "robot-upper-arm-left",
+      "component": 88,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 1886,
+      "label": [324, 535],
+      "radius": 11.18
+    },
+    {
+      "id": "robot-grille-upper",
+      "component": 89,
+      "colorId": 25,
+      "fill": "#2D2F33",
+      "area": 1088,
+      "label": [417, 538],
+      "radius": 7.0
+    },
+    {
+      "id": "robot-arm-left-wheel-rim",
+      "component": 91,
+      "colorId": 22,
+      "fill": "#3B3F42",
+      "area": 1053,
+      "label": [289, 592],
+      "radius": 7.81
+    },
+    {
+      "id": "robot-forearm-right-panel",
+      "component": 92,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 2689,
+      "label": [687, 586],
+      "radius": 9.49
+    },
+    {
+      "id": "robot-headlight-left",
+      "component": 93,
+      "colorId": 13,
+      "fill": "#FEDE47",
+      "area": 1244,
+      "label": [370, 560],
+      "radius": 13.6
+    },
+    {
+      "id": "robot-arm-left-wheel-hub",
+      "component": 94,
+      "colorId": 24,
+      "fill": "#252E32",
+      "area": 355,
+      "label": [281, 569],
+      "radius": 5.83
+    },
+    {
+      "id": "robot-forearm-right-dark",
+      "component": 96,
+      "colorId": 26,
+      "fill": "#222325",
+      "area": 2054,
+      "label": [658, 593],
+      "radius": 13.6
+    },
+    {
+      "id": "robot-shoulder-left-joint",
+      "component": 97,
+      "colorId": 26,
+      "fill": "#222325",
+      "area": 626,
+      "label": [162, 567],
+      "radius": 12.08
+    },
+    {
+      "id": "robot-grille",
+      "component": 98,
+      "colorId": 19,
+      "fill": "#A7A7AB",
+      "area": 1954,
+      "label": [421, 554],
+      "radius": 5.0
+    },
+    {
+      "id": "robot-arm-left-tire",
+      "component": 99,
+      "colorId": 28,
+      "fill": "#000000",
+      "area": 966,
+      "label": [301, 617],
+      "radius": 10.63
+    },
+    {
+      "id": "robot-shoulder-right-joint",
+      "component": 100,
+      "colorId": 27,
+      "fill": "#181819",
+      "area": 1480,
+      "label": [574, 621],
+      "radius": 15.26
+    },
+    {
+      "id": "star-left",
+      "component": 101,
+      "colorId": 10,
+      "fill": "#FED604",
+      "area": 1698,
+      "label": [89, 591],
+      "radius": 17.0
+    },
+    {
+      "id": "robot-shoulder-right-star",
+      "component": 102,
+      "colorId": 10,
+      "fill": "#FED604",
+      "area": 522,
+      "label": [609, 581],
+      "radius": 9.9
+    },
+    {
+      "id": "robot-headlight-right",
+      "component": 104,
+      "colorId": 13,
+      "fill": "#FEDE47",
+      "area": 770,
+      "label": [533, 581],
+      "radius": 13.0
+    },
+    {
+      "id": "robot-elbow-left",
+      "component": 106,
+      "colorId": 19,
+      "fill": "#A7A7AB",
+      "area": 690,
+      "label": [197, 587],
+      "radius": 8.94
+    },
+    {
+      "id": "robot-forearm-right-side",
+      "component": 107,
+      "colorId": 18,
+      "fill": "#D6D5D5",
+      "area": 2149,
+      "label": [707, 608],
+      "radius": 14.32
+    },
+    {
+      "id": "robot-chest-left",
+      "component": 110,
+      "colorId": 24,
+      "fill": "#252E32",
+      "area": 2607,
+      "label": [379, 617],
+      "radius": 23.26
+    },
+    {
+      "id": "robot-forearm-left-top",
+      "component": 111,
+      "colorId": 24,
+      "fill": "#252E32",
+      "area": 1795,
+      "label": [188, 608],
+      "radius": 8.6
+    },
+    {
+      "id": "robot-forearm-left-panel",
+      "component": 112,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 5374,
+      "label": [144, 657],
+      "radius": 21.21
+    },
+    {
+      "id": "robot-chest-plate",
+      "component": 114,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 4519,
+      "label": [423, 647],
+      "radius": 14.87
+    },
+    {
+      "id": "robot-chest-right",
+      "component": 115,
+      "colorId": 24,
+      "fill": "#252E32",
+      "area": 1417,
+      "label": [525, 628],
+      "radius": 16.76
+    },
+    {
+      "id": "robot-chest-star",
+      "component": 116,
+      "colorId": 10,
+      "fill": "#FED604",
+      "area": 982,
+      "label": [457, 640],
+      "radius": 13.0
+    },
+    {
+      "id": "robot-elbow-right",
+      "component": 117,
+      "colorId": 19,
+      "fill": "#A7A7AB",
+      "area": 302,
+      "label": [621, 628],
+      "radius": 7.81
+    },
+    {
+      "id": "robot-chest-lower-trim",
+      "component": 118,
+      "colorId": 16,
+      "fill": "#B4B3B8",
+      "area": 844,
+      "label": [356, 646],
+      "radius": 8.06
+    },
+    {
+      "id": "robot-torso-left-joint",
+      "component": 119,
+      "colorId": 27,
+      "fill": "#181819",
+      "area": 720,
+      "label": [320, 637],
+      "radius": 10.77
+    },
+    {
+      "id": "robot-forearm-left-blue",
+      "component": 120,
+      "colorId": 7,
+      "fill": "#0054D0",
+      "area": 649,
+      "label": [211, 644],
+      "radius": 10.77
+    },
+    {
+      "id": "robot-elbow-right-joint",
+      "component": 121,
+      "colorId": 20,
+      "fill": "#8D8D92",
+      "area": 655,
+      "label": [603, 641],
+      "radius": 10.63
+    },
+    {
+      "id": "robot-forearm-right-cuff",
+      "component": 122,
+      "colorId": 25,
+      "fill": "#2D2F33",
+      "area": 1068,
+      "label": [641, 671],
+      "radius": 14.42
+    },
+    {
+      "id": "robot-forearm-left-back",
+      "component": 123,
+      "colorId": 25,
+      "fill": "#2D2F33",
+      "area": 788,
+      "label": [112, 699],
+      "radius": 7.62
+    },
+    {
+      "id": "robot-waist-left",
+      "component": 124,
+      "colorId": 21,
+      "fill": "#35414E",
+      "area": 509,
+      "label": [398, 663],
+      "radius": 8.94
+    },
+    {
+      "id": "robot-hip-left-red",
+      "component": 126,
+      "colorId": 8,
+      "fill": "#FC1A13",
+      "area": 657,
+      "label": [383, 678],
+      "radius": 7.21
+    },
+    {
+      "id": "robot-fist-left",
+      "component": 130,
+      "colorId": 22,
+      "fill": "#3B3F42",
+      "area": 3455,
+      "label": [191, 709],
+      "radius": 22.2
+    },
+    {
+      "id": "robot-hip-left-base",
+      "component": 131,
+      "colorId": 24,
+      "fill": "#252E32",
+      "area": 884,
+      "label": [362, 689],
+      "radius": 8.06
+    },
+    {
+      "id": "robot-waist",
+      "component": 132,
+      "colorId": 25,
+      "fill": "#2D2F33",
+      "area": 3131,
+      "label": [430, 727],
+      "radius": 24.0
+    },
+    {
+      "id": "robot-hip-right-red",
+      "component": 133,
+      "colorId": 8,
+      "fill": "#FC1A13",
+      "area": 254,
+      "label": [492, 687],
+      "radius": 5.66
+    },
+    {
+      "id": "robot-fist-left-knuckle-upper",
+      "component": 134,
+      "colorId": 25,
+      "fill": "#2D2F33",
+      "area": 357,
+      "label": [242, 694],
+      "radius": 7.07
+    },
+    {
+      "id": "robot-waist-belt",
+      "component": 135,
+      "colorId": 18,
+      "fill": "#D6D5D5",
+      "area": 522,
+      "label": [435, 691],
+      "radius": 8.0
+    },
+    {
+      "id": "robot-thigh-left",
+      "component": 137,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 2901,
+      "label": [342, 718],
+      "radius": 20.25
+    },
+    {
+      "id": "robot-fist-left-knuckle-middle",
+      "component": 139,
+      "colorId": 25,
+      "fill": "#2D2F33",
+      "area": 589,
+      "label": [230, 718],
+      "radius": 10.82
+    },
+    {
+      "id": "star-right",
+      "component": 140,
+      "colorId": 10,
+      "fill": "#FED604",
+      "area": 3445,
+      "label": [689, 754],
+      "radius": 24.19
+    },
+    {
+      "id": "robot-thigh-right",
+      "component": 141,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 2902,
+      "label": [513, 729],
+      "radius": 17.69
+    },
+    {
+      "id": "robot-fist-left-knuckle-lower",
+      "component": 144,
+      "colorId": 26,
+      "fill": "#222325",
+      "area": 562,
+      "label": [214, 738],
+      "radius": 9.85
+    },
+    {
+      "id": "robot-knee-left",
+      "component": 146,
+      "colorId": 22,
+      "fill": "#3B3F42",
+      "area": 538,
+      "label": [316, 744],
+      "radius": 7.28
+    },
+    {
+      "id": "robot-knee-right",
+      "component": 147,
+      "colorId": 23,
+      "fill": "#3D4145",
+      "area": 795,
+      "label": [531, 759],
+      "radius": 10.77
+    },
+    {
+      "id": "robot-shin-left-side",
+      "component": 148,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 2022,
+      "label": [235, 825],
+      "radius": 8.06
+    },
+    {
+      "id": "robot-shin-left-blue-upper",
+      "component": 149,
+      "colorId": 7,
+      "fill": "#0054D0",
+      "area": 1979,
+      "label": [301, 774],
+      "radius": 20.22
+    },
+    {
+      "id": "robot-shin-right-blue-upper",
+      "component": 150,
+      "colorId": 7,
+      "fill": "#0054D0",
+      "area": 1920,
+      "label": [566, 786],
+      "radius": 21.47
+    },
+    {
+      "id": "robot-shin-left-outer",
+      "component": 152,
+      "colorId": 16,
+      "fill": "#B4B3B8",
+      "area": 2499,
+      "label": [310, 878],
+      "radius": 12.0
+    },
+    {
+      "id": "robot-shin-right-inner",
+      "component": 153,
+      "colorId": 18,
+      "fill": "#D6D5D5",
+      "area": 2834,
+      "label": [556, 877],
+      "radius": 14.32
+    },
+    {
+      "id": "robot-knee-right-cap",
+      "component": 155,
+      "colorId": 25,
+      "fill": "#2D2F33",
+      "area": 260,
+      "label": [505, 789],
+      "radius": 8.49
+    },
+    {
+      "id": "robot-shin-left-back-tire",
+      "component": 156,
+      "colorId": 26,
+      "fill": "#222325",
+      "area": 1624,
+      "label": [196, 828],
+      "radius": 7.62
+    },
+    {
+      "id": "robot-tire-right",
+      "component": 157,
+      "colorId": 26,
+      "fill": "#222325",
+      "area": 4181,
+      "label": [506, 820],
+      "radius": 16.4
+    },
+    {
+      "id": "star-bottom-left",
+      "component": 158,
+      "colorId": 10,
+      "fill": "#FED604",
+      "area": 1134,
+      "label": [129, 818],
+      "radius": 13.93
+    },
+    {
+      "id": "robot-shin-left-front",
+      "component": 159,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 2916,
+      "label": [280, 821],
+      "radius": 25.71
+    },
+    {
+      "id": "robot-shin-left-back",
+      "component": 161,
+      "colorId": 27,
+      "fill": "#181819",
+      "area": 1167,
+      "label": [351, 820],
+      "radius": 8.0
+    },
+    {
+      "id": "robot-shin-right-front",
+      "component": 163,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 1862,
+      "label": [589, 826],
+      "radius": 18.97
+    },
+    {
+      "id": "robot-wheel-right-outer",
+      "component": 164,
+      "colorId": 26,
+      "fill": "#222325",
+      "area": 2548,
+      "label": [463, 837],
+      "radius": 7.0
+    },
+    {
+      "id": "robot-shin-left-trim",
+      "component": 165,
+      "colorId": 27,
+      "fill": "#181819",
+      "area": 841,
+      "label": [347, 887],
+      "radius": 7.0
+    },
+    {
+      "id": "robot-shin-right-blue-lower",
+      "component": 166,
+      "colorId": 7,
+      "fill": "#0054D0",
+      "area": 1950,
+      "label": [609, 864],
+      "radius": 18.25
+    },
+    {
+      "id": "robot-shin-left-blue-lower",
+      "component": 167,
+      "colorId": 7,
+      "fill": "#0054D0",
+      "area": 1952,
+      "label": [248, 862],
+      "radius": 15.81
+    },
+    {
+      "id": "robot-wheel-right-rim",
+      "component": 168,
+      "colorId": 19,
+      "fill": "#A7A7AB",
+      "area": 1070,
+      "label": [464, 855],
+      "radius": 7.62
+    },
+    {
+      "id": "robot-wheel-right-hub",
+      "component": 169,
+      "colorId": 16,
+      "fill": "#B4B3B8",
+      "area": 275,
+      "label": [467, 878],
+      "radius": 6.0
+    },
+    {
+      "id": "robot-foot-left-upper",
+      "component": 170,
+      "colorId": 24,
+      "fill": "#252E32",
+      "area": 3441,
+      "label": [235, 904],
+      "radius": 22.0
+    },
+    {
+      "id": "robot-foot-left-toe-border",
+      "component": 171,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 2650,
+      "label": [178, 935],
+      "radius": 8.0
+    },
+    {
+      "id": "robot-foot-right-upper",
+      "component": 172,
+      "colorId": 24,
+      "fill": "#252E32",
+      "area": 2875,
+      "label": [608, 908],
+      "radius": 20.02
+    },
+    {
+      "id": "robot-foot-right-toe-border",
+      "component": 173,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 2290,
+      "label": [607, 943],
+      "radius": 9.06
+    },
+    {
+      "id": "robot-foot-left-inner",
+      "component": 174,
+      "colorId": 26,
+      "fill": "#222325",
+      "area": 2060,
+      "label": [296, 930],
+      "radius": 17.0
+    },
+    {
+      "id": "robot-foot-right-inner",
+      "component": 175,
+      "colorId": 24,
+      "fill": "#252E32",
+      "area": 3517,
+      "label": [563, 947],
+      "radius": 28.46
+    },
+    {
+      "id": "robot-ankle-left-back",
+      "component": 176,
+      "colorId": 27,
+      "fill": "#181819",
+      "area": 506,
+      "label": [340, 927],
+      "radius": 7.0
+    },
+    {
+      "id": "robot-heel-right-base",
+      "component": 180,
+      "colorId": 27,
+      "fill": "#181819",
+      "area": 1269,
+      "label": [488, 949],
+      "radius": 15.52
+    },
+    {
+      "id": "robot-heel-right-outer",
+      "component": 181,
+      "colorId": 22,
+      "fill": "#3B3F42",
+      "area": 515,
+      "label": [517, 952],
+      "radius": 9.06
+    },
+    {
+      "id": "robot-foot-right-toe",
+      "component": 182,
+      "colorId": 24,
+      "fill": "#252E32",
+      "area": 2538,
+      "label": [654, 963],
+      "radius": 15.03
+    },
+    {
+      "id": "robot-foot-left-toe",
+      "component": 183,
+      "colorId": 24,
+      "fill": "#252E32",
+      "area": 3390,
+      "label": [204, 964],
+      "radius": 16.0
+    },
+    {
+      "id": "car-headlight-left-bulb",
+      "component": 30,
+      "colorId": 2,
+      "fill": "#FFFFFF",
+      "area": 325,
+      "label": [114, 212],
+      "radius": 9.49,
+      "source": "color-reference opaque white bulb split from its surrounding headlight"
+    }
+  ],
+  "nonPaintable": [
+    {
+      "component": 6,
+      "area": 49,
+      "radius": 2.0,
+      "fill": "#000000",
+      "label": [476, 49],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 9,
+      "area": 600,
+      "radius": 4.47,
+      "fill": "#000000",
+      "label": [543, 134],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 11,
+      "area": 674,
+      "radius": 6.32,
+      "fill": "#FFFFFF",
+      "label": [275, 117],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 12,
+      "area": 755,
+      "radius": 7.0,
+      "fill": "#FFFFFF",
+      "label": [372, 125],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 13,
+      "area": 98,
+      "radius": 5.1,
+      "fill": "#FFFFFF",
+      "label": [303, 113],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 14,
+      "area": 104,
+      "radius": 5.39,
+      "fill": "#FFFFFF",
+      "label": [402, 117],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 17,
+      "area": 18,
+      "radius": 1.41,
+      "fill": "#000000",
+      "label": [470, 136],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 20,
+      "area": 4,
+      "radius": 1.0,
+      "fill": "#000000",
+      "label": [389, 146],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 25,
+      "area": 63,
+      "radius": 3.0,
+      "fill": "#000000",
+      "label": [606, 162],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 26,
+      "area": 61,
+      "radius": 2.83,
+      "fill": "#000000",
+      "label": [543, 168],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 33,
+      "area": 308,
+      "radius": 4.47,
+      "fill": "#000000",
+      "label": [141, 235],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 35,
+      "area": 472,
+      "radius": 5.39,
+      "fill": "#000000",
+      "label": [287, 238],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 43,
+      "area": 34,
+      "radius": 2.0,
+      "fill": "#000000",
+      "label": [83, 233],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 44,
+      "area": 6,
+      "radius": 1.0,
+      "fill": "#000000",
+      "label": [96, 235],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 46,
+      "area": 8,
+      "radius": 1.0,
+      "fill": "#000000",
+      "label": [303, 243],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 47,
+      "area": 34,
+      "radius": 1.0,
+      "fill": "#000000",
+      "label": [314, 243],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 67,
+      "area": 6,
+      "radius": 1.0,
+      "fill": "#000000",
+      "label": [338, 452],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 69,
+      "area": 303,
+      "radius": 5.0,
+      "fill": "#FFFFFF",
+      "label": [419, 470],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 71,
+      "area": 4,
+      "radius": 1.0,
+      "fill": "#000000",
+      "label": [337, 458],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 72,
+      "area": 60,
+      "radius": 4.0,
+      "fill": "#FFFFFF",
+      "label": [401, 463],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 73,
+      "area": 269,
+      "radius": 4.0,
+      "fill": "#FFFFFF",
+      "label": [494, 473],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 75,
+      "area": 58,
+      "radius": 3.61,
+      "fill": "#FFFFFF",
+      "label": [478, 474],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 79,
+      "area": 20,
+      "radius": 2.0,
+      "fill": "#000000",
+      "label": [425, 503],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 80,
+      "area": 371,
+      "radius": 6.71,
+      "fill": "#000000",
+      "label": [507, 512],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 82,
+      "area": 337,
+      "radius": 6.08,
+      "fill": "#000000",
+      "label": [307, 512],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 83,
+      "area": 80,
+      "radius": 3.61,
+      "fill": "#000000",
+      "label": [454, 511],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 90,
+      "area": 140,
+      "radius": 4.47,
+      "fill": "#000000",
+      "label": [534, 537],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 95,
+      "area": 12,
+      "radius": 1.41,
+      "fill": "#000000",
+      "label": [672, 549],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 103,
+      "area": 11,
+      "radius": 1.41,
+      "fill": "#000000",
+      "label": [689, 568],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 105,
+      "area": 275,
+      "radius": 5.83,
+      "fill": "#000000",
+      "label": [177, 588],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 108,
+      "area": 733,
+      "radius": 5.83,
+      "fill": "#000000",
+      "label": [732, 613],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 109,
+      "area": 106,
+      "radius": 2.0,
+      "fill": "#000000",
+      "label": [554, 588],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 113,
+      "area": 137,
+      "radius": 5.1,
+      "fill": "#000000",
+      "label": [232, 606],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 125,
+      "area": 105,
+      "radius": 3.0,
+      "fill": "#FFFFFF",
+      "label": [504, 663],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 127,
+      "area": 236,
+      "radius": 5.0,
+      "fill": "#000000",
+      "label": [666, 675],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 128,
+      "area": 4,
+      "radius": 1.0,
+      "fill": "#000000",
+      "label": [493, 671],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 129,
+      "area": 54,
+      "radius": 2.24,
+      "fill": "#000000",
+      "label": [485, 676],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 136,
+      "area": 367,
+      "radius": 5.39,
+      "fill": "#000000",
+      "label": [492, 705],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 138,
+      "area": 213,
+      "radius": 6.0,
+      "fill": "#000000",
+      "label": [253, 708],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 142,
+      "area": 481,
+      "radius": 6.71,
+      "fill": "#000000",
+      "label": [118, 722],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 143,
+      "area": 57,
+      "radius": 3.0,
+      "fill": "#000000",
+      "label": [386, 722],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 145,
+      "area": 211,
+      "radius": 5.39,
+      "fill": "#000000",
+      "label": [460, 745],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 151,
+      "area": 1147,
+      "radius": 5.83,
+      "fill": "#FFFFFF",
+      "label": [628, 837],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 154,
+      "area": 6,
+      "radius": 1.0,
+      "fill": "#000000",
+      "label": [350, 780],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 160,
+      "area": 24,
+      "radius": 2.24,
+      "fill": "#000000",
+      "label": [351, 798],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 162,
+      "area": 325,
+      "radius": 3.16,
+      "fill": "#000000",
+      "label": [219, 820],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 177,
+      "area": 4,
+      "radius": 1.0,
+      "fill": "#000000",
+      "label": [321, 921],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 178,
+      "area": 4,
+      "radius": 1.0,
+      "fill": "#000000",
+      "label": [318, 922],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    },
+    {
+      "component": 179,
+      "area": 338,
+      "radius": 5.39,
+      "fill": "#000000",
+      "label": [325, 935],
+      "reason": "thin eye white/highlight or tiny seam/trim; fixed monochrome, no touch required"
+    }
+  ]
+}

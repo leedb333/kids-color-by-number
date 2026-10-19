@@ -34,7 +34,7 @@ export const Artwork = forwardRef<SVGSVGElement, Props>(function Artwork(
         width={drawing.viewBox[2]}
         height={drawing.viewBox[3]}
         rx="20"
-        fill="#fffdf5"
+        fill={drawing.paperColor ?? '#fffdf5'}
       />
       {drawing.regions.map((region) => {
         const color = drawing.colors.find((item) => item.id === region.colorId)!
@@ -51,7 +51,11 @@ export const Artwork = forwardRef<SVGSVGElement, Props>(function Artwork(
               data-current={target}
               data-hint={region.id === hintId}
               fillRule={region.fillRule}
-              fill={filled ? color.hex : '#fffefb'}
+              fill={
+                filled
+                  ? (region.fill ?? color.hex)
+                  : (drawing.paperColor ?? '#fffefb')
+              }
               stroke={drawing.strokeColor ?? '#514c43'}
               strokeWidth={drawing.strokeWidth ?? 3}
               strokeLinejoin="round"
@@ -63,7 +67,7 @@ export const Artwork = forwardRef<SVGSVGElement, Props>(function Artwork(
                   ? `${region.colorId}번 ${color.name} 영역 ${region.id}`
                   : undefined
               }
-              onClick={() => onPaint?.(region.id)}
+              onClick={interactive ? () => onPaint?.(region.id) : undefined}
               onKeyDown={(event) => {
                 if (
                   interactive &&
@@ -104,7 +108,7 @@ export const Artwork = forwardRef<SVGSVGElement, Props>(function Artwork(
         <path
           data-outline="true"
           d={drawing.outlinePath}
-          fill="#141414"
+          fill={drawing.outlineColor ?? '#141414'}
           fillRule="evenodd"
           pointerEvents="none"
           aria-hidden="true"
@@ -145,7 +149,7 @@ export const Artwork = forwardRef<SVGSVGElement, Props>(function Artwork(
             pointerEvents="none"
             fill={region.colorId === activeId ? '#9b5d16' : '#676b61'}
             fontFamily="sans-serif"
-            fontSize={drawing.labelSize ?? 20}
+            fontSize={region.labelSize ?? drawing.labelSize ?? 20}
             fontWeight="700"
           >
             {region.colorId}
