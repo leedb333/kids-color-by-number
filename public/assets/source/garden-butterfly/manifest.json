@@ -1,0 +1,2086 @@
+{
+  "id": "garden-butterfly",
+  "title": "알록달록 나비",
+  "tool": "built-in image_gen",
+  "prompt": "Use case: illustration-story. Asset: color reference for a children's color-by-number game ages 5–8. ONE portrait 4:5 illustration of a beautiful big COLORFUL BUTTERFLY, symmetrical spread wings, smiling friendly face, rounded antennae and segmented body. Entire butterfly safely inside canvas and wings fill almost all width and height. Each upper and lower wing divided into broad petal-shaped cells with large oval and circular markings, approx 60–80 enclosed shapes total. 28 distinct bright opaque solid colors from pink, coral, yellow, orange, green, turquoise, blue, purple. Single flat pale cream background. Crisp thick uniform pure black closed outlines between ALL colors. Absolutely flat fill with NO gradients, highlights, shadows, texture, glow, transparency or 3D. No landscape, flowers, extra insects, text, numbers, watermarks or frames. Every colored cell must be a fully closed shape, suitable for independent tap coloring. Avoid thin or tiny regions.",
+  "sourceSha256": "36b28d5d03d2d893344aeeb0943bb932827f278bd6189152e6df505ab1a594e6",
+  "colors": [
+    {
+      "id": 1,
+      "hex": "#FDF7DD",
+      "name": "밝은 노랑"
+    },
+    {
+      "id": 2,
+      "hex": "#B269FB",
+      "name": "보라"
+    },
+    {
+      "id": 3,
+      "hex": "#FB61A9",
+      "name": "장미"
+    },
+    {
+      "id": 4,
+      "hex": "#FDE519",
+      "name": "노랑"
+    },
+    {
+      "id": 5,
+      "hex": "#FC7586",
+      "name": "빨강"
+    },
+    {
+      "id": 6,
+      "hex": "#6E88F5",
+      "name": "파랑"
+    },
+    {
+      "id": 7,
+      "hex": "#66AFCF",
+      "name": "하늘"
+    },
+    {
+      "id": 8,
+      "hex": "#FDD015",
+      "name": "노랑"
+    },
+    {
+      "id": 9,
+      "hex": "#CD46CE",
+      "name": "분홍"
+    },
+    {
+      "id": 10,
+      "hex": "#28CFE6",
+      "name": "청록"
+    },
+    {
+      "id": 11,
+      "hex": "#3894F7",
+      "name": "파랑"
+    },
+    {
+      "id": 12,
+      "hex": "#02CDE1",
+      "name": "청록"
+    },
+    {
+      "id": 13,
+      "hex": "#F83082",
+      "name": "장미"
+    },
+    {
+      "id": 14,
+      "hex": "#FDA00C",
+      "name": "주황"
+    },
+    {
+      "id": 15,
+      "hex": "#FC723A",
+      "name": "주황"
+    },
+    {
+      "id": 16,
+      "hex": "#6D42EE",
+      "name": "파랑"
+    },
+    {
+      "id": 17,
+      "hex": "#0CDCA4",
+      "name": "청록"
+    },
+    {
+      "id": 18,
+      "hex": "#7DD231",
+      "name": "연두"
+    },
+    {
+      "id": 19,
+      "hex": "#019CDA",
+      "name": "하늘"
+    },
+    {
+      "id": 20,
+      "hex": "#3AE154",
+      "name": "초록"
+    },
+    {
+      "id": 21,
+      "hex": "#0474F4",
+      "name": "파랑"
+    },
+    {
+      "id": 22,
+      "hex": "#A8219E",
+      "name": "분홍"
+    },
+    {
+      "id": 23,
+      "hex": "#FA382C",
+      "name": "빨강"
+    },
+    {
+      "id": 24,
+      "hex": "#2438C6",
+      "name": "파랑"
+    },
+    {
+      "id": 25,
+      "hex": "#0152CD",
+      "name": "파랑"
+    },
+    {
+      "id": 26,
+      "hex": "#004BB6",
+      "name": "파랑"
+    },
+    {
+      "id": 27,
+      "hex": "#083AB6",
+      "name": "파랑"
+    },
+    {
+      "id": 28,
+      "hex": "#2025AA",
+      "name": "파랑"
+    }
+  ],
+  "regions": [
+    {
+      "id": "cell-001",
+      "colorId": 1,
+      "fill": "#FDF7DD",
+      "label": [
+        400,
+        910
+      ],
+      "labelSize": 20,
+      "touchRadius": 89.59,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-002",
+      "colorId": 24,
+      "fill": "#2438C6",
+      "label": [
+        108,
+        49
+      ],
+      "labelSize": 10.3,
+      "touchRadius": 9.22,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-003",
+      "colorId": 25,
+      "fill": "#0152CD",
+      "label": [
+        693,
+        49
+      ],
+      "labelSize": 10.3,
+      "touchRadius": 9.22,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-004",
+      "colorId": 13,
+      "fill": "#F83082",
+      "label": [
+        41,
+        55
+      ],
+      "labelSize": 12.1,
+      "touchRadius": 10.77,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-005",
+      "colorId": 13,
+      "fill": "#F83082",
+      "label": [
+        760,
+        55
+      ],
+      "labelSize": 12.1,
+      "touchRadius": 10.77,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-006",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        76,
+        59
+      ],
+      "labelSize": 20,
+      "touchRadius": 20.4,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-007",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        725,
+        59
+      ],
+      "labelSize": 20,
+      "touchRadius": 20.22,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-008",
+      "colorId": 11,
+      "fill": "#3894F7",
+      "label": [
+        132,
+        73
+      ],
+      "labelSize": 20,
+      "touchRadius": 20.88,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-009",
+      "colorId": 6,
+      "fill": "#6E88F5",
+      "label": [
+        669,
+        73
+      ],
+      "labelSize": 20,
+      "touchRadius": 20.88,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-010",
+      "colorId": 28,
+      "fill": "#2025AA",
+      "label": [
+        166,
+        76
+      ],
+      "labelSize": 10.1,
+      "touchRadius": 9.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-011",
+      "colorId": 28,
+      "fill": "#2025AA",
+      "label": [
+        635,
+        76
+      ],
+      "labelSize": 10.1,
+      "touchRadius": 9.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-012",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        35,
+        87
+      ],
+      "labelSize": 19.8,
+      "touchRadius": 17.72,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-013",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        766,
+        87
+      ],
+      "labelSize": 19.9,
+      "touchRadius": 17.8,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-014",
+      "colorId": 2,
+      "fill": "#B269FB",
+      "label": [
+        300,
+        99
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.84,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-015",
+      "colorId": 2,
+      "fill": "#B269FB",
+      "label": [
+        501,
+        99
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.84,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-016",
+      "colorId": 17,
+      "fill": "#0CDCA4",
+      "label": [
+        181,
+        108
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.84,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-017",
+      "colorId": 17,
+      "fill": "#0CDCA4",
+      "label": [
+        620,
+        109
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.84,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-018",
+      "colorId": 13,
+      "fill": "#F83082",
+      "label": [
+        23,
+        119
+      ],
+      "labelSize": 12.3,
+      "touchRadius": 11.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-019",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        73,
+        108
+      ],
+      "labelSize": 16.5,
+      "touchRadius": 14.76,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-020",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        728,
+        108
+      ],
+      "labelSize": 16.5,
+      "touchRadius": 14.76,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-021",
+      "colorId": 13,
+      "fill": "#F83082",
+      "label": [
+        778,
+        119
+      ],
+      "labelSize": 12.3,
+      "touchRadius": 11.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-022",
+      "colorId": 25,
+      "fill": "#0152CD",
+      "label": [
+        215,
+        123
+      ],
+      "labelSize": 11.0,
+      "touchRadius": 9.85,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-023",
+      "colorId": 25,
+      "fill": "#0152CD",
+      "label": [
+        586,
+        123
+      ],
+      "labelSize": 11.0,
+      "touchRadius": 9.85,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-024",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        162,
+        233
+      ],
+      "labelSize": 19.3,
+      "touchRadius": 17.2,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-025",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        641,
+        236
+      ],
+      "labelSize": 19.3,
+      "touchRadius": 17.2,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-026",
+      "colorId": 19,
+      "fill": "#019CDA",
+      "label": [
+        29,
+        180
+      ],
+      "labelSize": 14.2,
+      "touchRadius": 12.65,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-027",
+      "colorId": 19,
+      "fill": "#019CDA",
+      "label": [
+        772,
+        180
+      ],
+      "labelSize": 14.2,
+      "touchRadius": 12.65,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-028",
+      "colorId": 14,
+      "fill": "#FDA00C",
+      "label": [
+        222,
+        158
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.4,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-029",
+      "colorId": 14,
+      "fill": "#FDA00C",
+      "label": [
+        579,
+        158
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.47,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-030",
+      "colorId": 25,
+      "fill": "#0152CD",
+      "label": [
+        254,
+        173
+      ],
+      "labelSize": 10.1,
+      "touchRadius": 9.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-031",
+      "colorId": 25,
+      "fill": "#0152CD",
+      "label": [
+        547,
+        172
+      ],
+      "labelSize": 10.3,
+      "touchRadius": 9.22,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-032",
+      "colorId": 21,
+      "fill": "#0474F4",
+      "label": [
+        119,
+        191
+      ],
+      "labelSize": 20,
+      "touchRadius": 25.5,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-033",
+      "colorId": 21,
+      "fill": "#0474F4",
+      "label": [
+        682,
+        191
+      ],
+      "labelSize": 20,
+      "touchRadius": 25.5,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-034",
+      "colorId": 15,
+      "fill": "#FC723A",
+      "label": [
+        211,
+        223
+      ],
+      "labelSize": 20,
+      "touchRadius": 25.3,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-035",
+      "colorId": 15,
+      "fill": "#FC723A",
+      "label": [
+        590,
+        223
+      ],
+      "labelSize": 20,
+      "touchRadius": 25.3,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-036",
+      "colorId": 5,
+      "fill": "#FC7586",
+      "label": [
+        262,
+        209
+      ],
+      "labelSize": 20,
+      "touchRadius": 19.1,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-037",
+      "colorId": 5,
+      "fill": "#FC7586",
+      "label": [
+        541,
+        206
+      ],
+      "labelSize": 20,
+      "touchRadius": 19.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-038",
+      "colorId": 8,
+      "fill": "#FDD015",
+      "label": [
+        38,
+        214
+      ],
+      "labelSize": 20,
+      "touchRadius": 18.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-039",
+      "colorId": 8,
+      "fill": "#FDD015",
+      "label": [
+        763,
+        215
+      ],
+      "labelSize": 20,
+      "touchRadius": 18.25,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-041",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        299,
+        269
+      ],
+      "labelSize": 17.7,
+      "touchRadius": 15.81,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-042",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        502,
+        269
+      ],
+      "labelSize": 17.7,
+      "touchRadius": 15.81,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-043",
+      "colorId": 14,
+      "fill": "#FDA00C",
+      "label": [
+        104,
+        290
+      ],
+      "labelSize": 20,
+      "touchRadius": 28.07,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-044",
+      "colorId": 14,
+      "fill": "#FDA00C",
+      "label": [
+        697,
+        290
+      ],
+      "labelSize": 20,
+      "touchRadius": 28.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-045",
+      "colorId": 8,
+      "fill": "#FDD015",
+      "label": [
+        400,
+        283
+      ],
+      "labelSize": 20,
+      "touchRadius": 25.55,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-046",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        191,
+        275
+      ],
+      "labelSize": 20,
+      "touchRadius": 26.17,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-047",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        610,
+        275
+      ],
+      "labelSize": 20,
+      "touchRadius": 26.17,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-048",
+      "colorId": 21,
+      "fill": "#0474F4",
+      "label": [
+        54,
+        280
+      ],
+      "labelSize": 20,
+      "touchRadius": 17.89,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-049",
+      "colorId": 23,
+      "fill": "#FA382C",
+      "label": [
+        650,
+        274
+      ],
+      "labelSize": 11.2,
+      "touchRadius": 10.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-050",
+      "colorId": 21,
+      "fill": "#0474F4",
+      "label": [
+        747,
+        280
+      ],
+      "labelSize": 20,
+      "touchRadius": 17.89,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-051",
+      "colorId": 23,
+      "fill": "#FA382C",
+      "label": [
+        151,
+        274
+      ],
+      "labelSize": 11.2,
+      "touchRadius": 10.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-053",
+      "colorId": 21,
+      "fill": "#0474F4",
+      "label": [
+        225,
+        310
+      ],
+      "labelSize": 20,
+      "touchRadius": 17.89,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-054",
+      "colorId": 21,
+      "fill": "#0474F4",
+      "label": [
+        576,
+        310
+      ],
+      "labelSize": 20,
+      "touchRadius": 18.03,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-055",
+      "colorId": 25,
+      "fill": "#0152CD",
+      "label": [
+        24,
+        331
+      ],
+      "labelSize": 13.1,
+      "touchRadius": 11.66,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-056",
+      "colorId": 25,
+      "fill": "#0152CD",
+      "label": [
+        777,
+        331
+      ],
+      "labelSize": 13.5,
+      "touchRadius": 12.04,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-061",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        121,
+        354
+      ],
+      "labelSize": 20,
+      "touchRadius": 29.07,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-062",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        680,
+        354
+      ],
+      "labelSize": 20,
+      "touchRadius": 29.07,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-063",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        288,
+        369
+      ],
+      "labelSize": 20,
+      "touchRadius": 26.87,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-064",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        513,
+        369
+      ],
+      "labelSize": 20,
+      "touchRadius": 26.91,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-065",
+      "colorId": 13,
+      "fill": "#F83082",
+      "label": [
+        67,
+        369
+      ],
+      "labelSize": 20,
+      "touchRadius": 23.26,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-066",
+      "colorId": 13,
+      "fill": "#F83082",
+      "label": [
+        734,
+        369
+      ],
+      "labelSize": 20,
+      "touchRadius": 23.19,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-067",
+      "colorId": 13,
+      "fill": "#F83082",
+      "label": [
+        399,
+        363
+      ],
+      "labelSize": 6.8,
+      "touchRadius": 6.08,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-068",
+      "colorId": 10,
+      "fill": "#28CFE6",
+      "label": [
+        176,
+        401
+      ],
+      "labelSize": 20,
+      "touchRadius": 23.02,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-069",
+      "colorId": 10,
+      "fill": "#28CFE6",
+      "label": [
+        624,
+        400
+      ],
+      "labelSize": 20,
+      "touchRadius": 23.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-072",
+      "colorId": 27,
+      "fill": "#083AB6",
+      "label": [
+        773,
+        423
+      ],
+      "labelSize": 13.4,
+      "touchRadius": 12.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-073",
+      "colorId": 27,
+      "fill": "#083AB6",
+      "label": [
+        28,
+        423
+      ],
+      "labelSize": 13.4,
+      "touchRadius": 12.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-074",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        398,
+        422
+      ],
+      "labelSize": 20,
+      "touchRadius": 33.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-075",
+      "colorId": 11,
+      "fill": "#3894F7",
+      "label": [
+        229,
+        431
+      ],
+      "labelSize": 20,
+      "touchRadius": 30.08,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-076",
+      "colorId": 11,
+      "fill": "#3894F7",
+      "label": [
+        574,
+        432
+      ],
+      "labelSize": 20,
+      "touchRadius": 29.97,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-077",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        136,
+        449
+      ],
+      "labelSize": 20,
+      "touchRadius": 29.21,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-078",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        665,
+        449
+      ],
+      "labelSize": 20,
+      "touchRadius": 29.41,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-079",
+      "colorId": 8,
+      "fill": "#FDD015",
+      "label": [
+        52,
+        445
+      ],
+      "labelSize": 18.1,
+      "touchRadius": 16.12,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-080",
+      "colorId": 8,
+      "fill": "#FDD015",
+      "label": [
+        749,
+        445
+      ],
+      "labelSize": 17.9,
+      "touchRadius": 16.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-081",
+      "colorId": 14,
+      "fill": "#FDA00C",
+      "label": [
+        401,
+        483
+      ],
+      "labelSize": 20,
+      "touchRadius": 23.77,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-082",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        228,
+        503
+      ],
+      "labelSize": 20,
+      "touchRadius": 30.48,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-083",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        573,
+        503
+      ],
+      "labelSize": 20,
+      "touchRadius": 30.41,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-084",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        67,
+        492
+      ],
+      "labelSize": 18.4,
+      "touchRadius": 16.4,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-085",
+      "colorId": 14,
+      "fill": "#FDA00C",
+      "label": [
+        300,
+        509
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.02,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-086",
+      "colorId": 14,
+      "fill": "#FDA00C",
+      "label": [
+        498,
+        507
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.02,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-087",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        734,
+        492
+      ],
+      "labelSize": 18.5,
+      "touchRadius": 16.55,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-088",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        174,
+        522
+      ],
+      "labelSize": 20,
+      "touchRadius": 20.62,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-089",
+      "colorId": 6,
+      "fill": "#6E88F5",
+      "label": [
+        452,
+        511
+      ],
+      "labelSize": 8.5,
+      "touchRadius": 7.62,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-090",
+      "colorId": 7,
+      "fill": "#66AFCF",
+      "label": [
+        349,
+        511
+      ],
+      "labelSize": 8.2,
+      "touchRadius": 7.28,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-091",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        627,
+        522
+      ],
+      "labelSize": 20,
+      "touchRadius": 20.59,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-092",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        395,
+        533
+      ],
+      "labelSize": 20,
+      "touchRadius": 23.09,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-093",
+      "colorId": 28,
+      "fill": "#2025AA",
+      "label": [
+        83,
+        517
+      ],
+      "labelSize": 8.5,
+      "touchRadius": 7.62,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-094",
+      "colorId": 24,
+      "fill": "#2438C6",
+      "label": [
+        718,
+        517
+      ],
+      "labelSize": 8.5,
+      "touchRadius": 7.62,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-095",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        287,
+        560
+      ],
+      "labelSize": 17.1,
+      "touchRadius": 15.23,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-096",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        516,
+        561
+      ],
+      "labelSize": 17.1,
+      "touchRadius": 15.23,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-097",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        332,
+        614
+      ],
+      "labelSize": 14.2,
+      "touchRadius": 12.65,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-098",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        470,
+        617
+      ],
+      "labelSize": 14.2,
+      "touchRadius": 12.65,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-099",
+      "colorId": 14,
+      "fill": "#FDA00C",
+      "label": [
+        176,
+        587
+      ],
+      "labelSize": 20,
+      "touchRadius": 20.81,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-100",
+      "colorId": 14,
+      "fill": "#FDA00C",
+      "label": [
+        626,
+        588
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.1,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-101",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        281,
+        660
+      ],
+      "labelSize": 20,
+      "touchRadius": 24.7,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-102",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        520,
+        660
+      ],
+      "labelSize": 20,
+      "touchRadius": 24.6,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-103",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        143,
+        571
+      ],
+      "labelSize": 12.8,
+      "touchRadius": 11.4,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-104",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        658,
+        570
+      ],
+      "labelSize": 12.8,
+      "touchRadius": 11.4,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-105",
+      "colorId": 20,
+      "fill": "#3AE154",
+      "label": [
+        396,
+        584
+      ],
+      "labelSize": 20,
+      "touchRadius": 24.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-106",
+      "colorId": 10,
+      "fill": "#28CFE6",
+      "label": [
+        84,
+        616
+      ],
+      "labelSize": 10.6,
+      "touchRadius": 9.43,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-107",
+      "colorId": 10,
+      "fill": "#28CFE6",
+      "label": [
+        718,
+        612
+      ],
+      "labelSize": 10.3,
+      "touchRadius": 9.22,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-108",
+      "colorId": 11,
+      "fill": "#3894F7",
+      "label": [
+        242,
+        627
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.21,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-109",
+      "colorId": 11,
+      "fill": "#3894F7",
+      "label": [
+        559,
+        627
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.21,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-110",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        118,
+        601
+      ],
+      "labelSize": 20,
+      "touchRadius": 20.25,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-111",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        683,
+        601
+      ],
+      "labelSize": 20,
+      "touchRadius": 20.25,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-112",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        343,
+        683
+      ],
+      "labelSize": 20,
+      "touchRadius": 20.88,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-113",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        457,
+        688
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.1,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-114",
+      "colorId": 25,
+      "fill": "#0152CD",
+      "label": [
+        30,
+        752
+      ],
+      "labelSize": 10.3,
+      "touchRadius": 9.22,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-115",
+      "colorId": 27,
+      "fill": "#083AB6",
+      "label": [
+        740,
+        613
+      ],
+      "labelSize": 10.1,
+      "touchRadius": 9.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-116",
+      "colorId": 12,
+      "fill": "#02CDE1",
+      "label": [
+        400,
+        635
+      ],
+      "labelSize": 20,
+      "touchRadius": 22.2,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-117",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        115,
+        666
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.21,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-118",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        687,
+        667
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.21,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-119",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        57,
+        649
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.1,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-120",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        744,
+        649
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-121",
+      "colorId": 21,
+      "fill": "#0474F4",
+      "label": [
+        400,
+        682
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.38,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-122",
+      "colorId": 21,
+      "fill": "#0474F4",
+      "label": [
+        239,
+        666
+      ],
+      "labelSize": 7.9,
+      "touchRadius": 7.07,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-123",
+      "colorId": 26,
+      "fill": "#004BB6",
+      "label": [
+        562,
+        665
+      ],
+      "labelSize": 7.5,
+      "touchRadius": 6.71,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-124",
+      "colorId": 2,
+      "fill": "#B269FB",
+      "label": [
+        205,
+        679
+      ],
+      "labelSize": 20,
+      "touchRadius": 23.35,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-125",
+      "colorId": 2,
+      "fill": "#B269FB",
+      "label": [
+        596,
+        679
+      ],
+      "labelSize": 20,
+      "touchRadius": 23.35,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-126",
+      "colorId": 10,
+      "fill": "#28CFE6",
+      "label": [
+        515,
+        724
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.26,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-127",
+      "colorId": 10,
+      "fill": "#28CFE6",
+      "label": [
+        286,
+        724
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.26,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-128",
+      "colorId": 14,
+      "fill": "#FDA00C",
+      "label": [
+        324,
+        778
+      ],
+      "labelSize": 20,
+      "touchRadius": 26.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-129",
+      "colorId": 14,
+      "fill": "#FDA00C",
+      "label": [
+        477,
+        780
+      ],
+      "labelSize": 20,
+      "touchRadius": 26.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-130",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        48,
+        717
+      ],
+      "labelSize": 20,
+      "touchRadius": 25.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-131",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        753,
+        717
+      ],
+      "labelSize": 20,
+      "touchRadius": 25.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-132",
+      "colorId": 10,
+      "fill": "#28CFE6",
+      "label": [
+        156,
+        742
+      ],
+      "labelSize": 20,
+      "touchRadius": 31.38,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-133",
+      "colorId": 10,
+      "fill": "#28CFE6",
+      "label": [
+        644,
+        741
+      ],
+      "labelSize": 20,
+      "touchRadius": 31.24,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-134",
+      "colorId": 2,
+      "fill": "#B269FB",
+      "label": [
+        400,
+        727
+      ],
+      "labelSize": 20,
+      "touchRadius": 19.1,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-135",
+      "colorId": 16,
+      "fill": "#6D42EE",
+      "label": [
+        245,
+        711
+      ],
+      "labelSize": 7.2,
+      "touchRadius": 6.4,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-136",
+      "colorId": 16,
+      "fill": "#6D42EE",
+      "label": [
+        556,
+        711
+      ],
+      "labelSize": 7.2,
+      "touchRadius": 6.4,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-137",
+      "colorId": 26,
+      "fill": "#004BB6",
+      "label": [
+        771,
+        752
+      ],
+      "labelSize": 10.0,
+      "touchRadius": 8.94,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-138",
+      "colorId": 13,
+      "fill": "#F83082",
+      "label": [
+        75,
+        754
+      ],
+      "labelSize": 8.5,
+      "touchRadius": 7.62,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-139",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        258,
+        760
+      ],
+      "labelSize": 20,
+      "touchRadius": 19.65,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-140",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        543,
+        759
+      ],
+      "labelSize": 20,
+      "touchRadius": 19.65,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-141",
+      "colorId": 22,
+      "fill": "#A8219E",
+      "label": [
+        726,
+        753
+      ],
+      "labelSize": 8.1,
+      "touchRadius": 7.21,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-142",
+      "colorId": 9,
+      "fill": "#CD46CE",
+      "label": [
+        400,
+        762
+      ],
+      "labelSize": 12.3,
+      "touchRadius": 11.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-145",
+      "colorId": 8,
+      "fill": "#FDD015",
+      "label": [
+        53,
+        783
+      ],
+      "labelSize": 20,
+      "touchRadius": 25.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-146",
+      "colorId": 8,
+      "fill": "#FDD015",
+      "label": [
+        748,
+        783
+      ],
+      "labelSize": 20,
+      "touchRadius": 24.74,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-147",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        190,
+        827
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.93,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-148",
+      "colorId": 4,
+      "fill": "#FDE519",
+      "label": [
+        611,
+        826
+      ],
+      "labelSize": 20,
+      "touchRadius": 21.93,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-149",
+      "colorId": 13,
+      "fill": "#F83082",
+      "label": [
+        132,
+        934
+      ],
+      "labelSize": 19.6,
+      "touchRadius": 17.46,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-150",
+      "colorId": 13,
+      "fill": "#F83082",
+      "label": [
+        669,
+        934
+      ],
+      "labelSize": 19.1,
+      "touchRadius": 17.09,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-151",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        286,
+        848
+      ],
+      "labelSize": 20,
+      "touchRadius": 24.52,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-152",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        515,
+        848
+      ],
+      "labelSize": 20,
+      "touchRadius": 24.52,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-153",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        238,
+        831
+      ],
+      "labelSize": 20,
+      "touchRadius": 20.88,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-154",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        563,
+        831
+      ],
+      "labelSize": 20,
+      "touchRadius": 20.81,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-155",
+      "colorId": 17,
+      "fill": "#0CDCA4",
+      "label": [
+        140,
+        839
+      ],
+      "labelSize": 20,
+      "touchRadius": 18.03,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-156",
+      "colorId": 17,
+      "fill": "#0CDCA4",
+      "label": [
+        661,
+        840
+      ],
+      "labelSize": 20,
+      "touchRadius": 18.36,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-157",
+      "colorId": 6,
+      "fill": "#6E88F5",
+      "label": [
+        68,
+        846
+      ],
+      "labelSize": 20,
+      "touchRadius": 22.56,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-158",
+      "colorId": 2,
+      "fill": "#B269FB",
+      "label": [
+        733,
+        846
+      ],
+      "labelSize": 20,
+      "touchRadius": 22.36,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-159",
+      "colorId": 27,
+      "fill": "#083AB6",
+      "label": [
+        480,
+        843
+      ],
+      "labelSize": 7.1,
+      "touchRadius": 6.32,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-160",
+      "colorId": 27,
+      "fill": "#083AB6",
+      "label": [
+        320,
+        842
+      ],
+      "labelSize": 6.7,
+      "touchRadius": 6.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-161",
+      "colorId": 26,
+      "fill": "#004BB6",
+      "label": [
+        275,
+        893
+      ],
+      "labelSize": 9.2,
+      "touchRadius": 8.25,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-162",
+      "colorId": 27,
+      "fill": "#083AB6",
+      "label": [
+        526,
+        893
+      ],
+      "labelSize": 9.0,
+      "touchRadius": 8.06,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-163",
+      "colorId": 18,
+      "fill": "#7DD231",
+      "label": [
+        117,
+        886
+      ],
+      "labelSize": 20,
+      "touchRadius": 27.17,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-164",
+      "colorId": 20,
+      "fill": "#3AE154",
+      "label": [
+        684,
+        886
+      ],
+      "labelSize": 20,
+      "touchRadius": 27.17,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-165",
+      "colorId": 24,
+      "fill": "#2438C6",
+      "label": [
+        153,
+        876
+      ],
+      "labelSize": 6.7,
+      "touchRadius": 6.0,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-167",
+      "colorId": 25,
+      "fill": "#0152CD",
+      "label": [
+        220,
+        919
+      ],
+      "labelSize": 9.5,
+      "touchRadius": 8.49,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-168",
+      "colorId": 14,
+      "fill": "#FDA00C",
+      "label": [
+        242,
+        894
+      ],
+      "labelSize": 20,
+      "touchRadius": 20.62,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-169",
+      "colorId": 14,
+      "fill": "#FDA00C",
+      "label": [
+        559,
+        894
+      ],
+      "labelSize": 20,
+      "touchRadius": 20.62,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-170",
+      "colorId": 24,
+      "fill": "#2438C6",
+      "label": [
+        581,
+        919
+      ],
+      "labelSize": 9.5,
+      "touchRadius": 8.49,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-171",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        178,
+        910
+      ],
+      "labelSize": 20,
+      "touchRadius": 30.08,
+      "fillRule": "evenodd"
+    },
+    {
+      "id": "cell-172",
+      "colorId": 3,
+      "fill": "#FB61A9",
+      "label": [
+        623,
+        910
+      ],
+      "labelSize": 20,
+      "touchRadius": 30.08,
+      "fillRule": "evenodd"
+    }
+  ],
+  "fixedDetails": 11,
+  "minTouchRadius": 6.0,
+  "conversion": "closed connected cells; one solid HEX per cell; no gradient or raster overlay"
+}

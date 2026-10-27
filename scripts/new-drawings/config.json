@@ -1,0 +1,30 @@
+[
+  {
+    "id": "fire-robot",
+    "title": "소방차 로봇 변신",
+    "file": "exec-e805763f-d00b-485e-bbc4-b62cac5f816e.png",
+    "prompt": "Use case: illustration-story. Asset: finished color reference for a children's color-by-number game ages 5–8. Generate ONE portrait illustration, about 4:5 aspect ratio. Subject: a friendly FIRE ENGINE ROBOT, fire engine vehicle above and its transformed smiling rescue robot below, matching playful rounded coloring book style, no weapons or actual fire. Big simple closed shapes, bold uniform pure black outlines fully separating every colored region. Use 28 distinct flat opaque colors across body panels, wheels, windows, ladder, helmet and badges. Red, orange and yellow dominate, blue windows, colored gray joints; single flat pale mint background. All color fills absolutely solid: NO gradients, shading, highlights, shadows, texture, glow, translucency, 3D. Around 65–100 large enclosed regions, avoid tiny mechanical details. Center large subjects occupying 90% of canvas with safe margins all around. No text, numbers, watermarks, borders or inset panels. This will be algorithmically segmented and vectorized, so ensure black boundaries never have gaps and each intended color is enclosed.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "baby-dinosaur",
+    "title": "공룡과 알",
+    "file": "exec-c32ad6fd-0122-4da5-a5f0-0648090ef31e.png",
+    "prompt": "Use case: illustration-story. Asset: finished color reference for a children's color-by-number game ages 5–8. ONE portrait 4:5 illustration: friendly smiling baby DINOSAUR with a large patterned dinosaur EGG beside it, leafy tail, rounded feet and a row of back plates. Fill canvas with these two main subjects, full bodies with safe margins. Style: charming crisp coloring book, thick uniform pure black outlines completely enclosing every flat color cell. 28 distinct opaque solid colors, greens, turquoise, warm yellow and orange dinosaur plates, pink cheeks, and egg with broad colorful bands and large spots. Single flat pale sky blue background. Around 55–85 large closed color regions. No tiny details. NO gradients, shading, texture, shadows, translucent effects, glow, highlights, 3D. No landscape or extra characters, no text, numbers, watermarks or frame. Technical: black boundaries must never have gaps, for conversion into separately tappable color-by-number cells.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "garden-butterfly",
+    "title": "알록달록 나비",
+    "file": "exec-481b0a54-7c2c-4e57-8f74-b1419a24bb46.png",
+    "prompt": "Use case: illustration-story. Asset: color reference for a children's color-by-number game ages 5–8. ONE portrait 4:5 illustration of a beautiful big COLORFUL BUTTERFLY, symmetrical spread wings, smiling friendly face, rounded antennae and segmented body. Entire butterfly safely inside canvas and wings fill almost all width and height. Each upper and lower wing divided into broad petal-shaped cells with large oval and circular markings, approx 60–80 enclosed shapes total. 28 distinct bright opaque solid colors from pink, coral, yellow, orange, green, turquoise, blue, purple. Single flat pale cream background. Crisp thick uniform pure black closed outlines between ALL colors. Absolutely flat fill with NO gradients, highlights, shadows, texture, glow, transparency or 3D. No landscape, flowers, extra insects, text, numbers, watermarks or frames. Every colored cell must be a fully closed shape, suitable for independent tap coloring. Avoid thin or tiny regions.",
+    "tool": "built-in image_gen"
+  },
+  {
+    "id": "rose",
+    "title": "장미꽃",
+    "file": "exec-317dbf63-c43a-4104-94bb-4e19c7ffc4ec.png",
+    "prompt": "Use case: illustration-story. Asset: color reference for a children's color-by-number game ages 5–8. ONE portrait 4:5 illustration: a single magnificent ROSE FLOWER on a curved stem with 4 broad leaves, a big round layered spiral blossom occupying top two-thirds of page, large curved overlapping petal shapes all outlined and closed. Bottom leaves have broad closed segments and stem has several sections. Around 55–75 large color cells. Use 28 distinct flat opaque solid colors: warm red, coral, salmon, pink, magenta, peach and yellow rose petals, green and teal leaves and stem. Each petal is one solid fill, not realistic shading. Uniform pure black bold clean outlines separating ALL colors. Single flat pale lavender background. Flower fills page with safe margins. Cheerful elegant simple coloring book style. Absolutely NO gradients, shading, highlights, shadows, texture, glow, transparency or 3D. No vase, extra flowers, text, numbers, watermarks or borders. Every color cell is fully enclosed for independent touch coloring. Avoid micro details.",
+    "tool": "built-in image_gen"
+  }
+]

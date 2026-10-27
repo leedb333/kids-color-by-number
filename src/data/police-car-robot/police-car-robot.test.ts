@@ -13,7 +13,6 @@ import {
   progress,
   storageKey,
 } from '../../engine'
-import { rainbowChild } from '../rainbow-child'
 import { drawings } from '../drawings'
 
 const ordered = drawing.colors.flatMap((color) =>
@@ -116,12 +115,9 @@ describe('28-color police car robot contract', () => {
       )?.history,
     ).toEqual(all)
   })
-  it('preserves rainbow IDs, revision, and storage keys', () => {
-    expect(drawings['rainbow-child']).toBe(rainbowChild)
-    expect(rainbowChild.revision).toBe(2)
-    expect(storageKey(rainbowChild)).toBe('coloring:v1:rainbow-child:r2')
+  it('preserves police identity, revision and storage key', () => {
+    expect(drawings[drawing.id]).toBe(drawing)
     expect(storageKey(drawing)).toBe('coloring:v1:police-car-robot:r1')
-    expect(storageKey(drawing)).not.toBe(storageKey(rainbowChild))
   })
   it('records the real original hashes and preserves explicit region boundaries', () => {
     for (const source of manifest.sources) {

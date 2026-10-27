@@ -76,7 +76,7 @@ describe('drawing data contracts', () => {
   it('keeps the test SVG separate from all official catalog designs', () => {
     expect(drawing.kind).toBe('test')
     expect(officialCatalog.map((item) => item.colorCount)).toEqual([
-      28, 25, 24, 30, 23, 27,
+      28, 28, 28, 28, 28,
     ])
     expect(officialCatalog.map((item) => item.id)).not.toContain(drawing.id)
   })
