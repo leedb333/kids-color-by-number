@@ -1015,6 +1015,55 @@ dialog p {
 .catalog-card:not(:disabled):hover {
   background: #ebf1df;
 }
+
+/* Keep the home page spacious; give the coloring stage the available height.
+   Width still derives from the original viewBox ratio, including when zoomed. */
+.is-coloring { padding: 0 12px; }
+.is-coloring .site-header { padding: 6px 0; min-height: 48px; }
+.is-coloring .brand { gap: 6px; font-size: 11px; }
+.is-coloring .brand br { display: none; }
+.is-coloring .brand b { font-size: 16px; margin-left: 4px; }
+.is-coloring .brand-mark { width: 32px; height: 32px; font-size: 28px; border-radius: 10px; }
+.is-coloring .connection-pill { padding: 5px 8px; font-size: 10px; }
+.is-coloring .coloring { max-width: 960px; padding: 4px 0 12px; }
+.is-coloring .coloring-heading { min-height: 44px; }
+.is-coloring .back-button { min-height: 44px; padding: 6px 10px; }
+.is-coloring .drawing-title { margin: 0 0 6px; gap: 8px; }
+.is-coloring .drawing-title .eyebrow { display: none; }
+.is-coloring .drawing-title h1 { font-size: 19px; }
+.is-coloring .drawing-size { font-size: 11px; padding: 2px 8px; }
+.is-coloring .progress-panel { padding: 6px 10px; border-radius: 14px; }
+.is-coloring .progress-top { font-size: 11px; }
+.is-coloring .progress-top strong { font-size: 16px; }
+.is-coloring .progress-track { height: 5px; margin-top: 3px; }
+.is-coloring .palette { gap: 8px; padding: 7px 5px; margin-top: 0; }
+.is-coloring .color-chip.selected { outline-offset: 2px; outline-width: 2px; }
+.is-coloring .color-chip.selected:after { display: none; }
+.is-coloring .canvas-panel { margin-top: 6px; border-radius: 14px; box-shadow: none; }
+.is-coloring .current-instruction { padding: 5px 10px; gap: 8px; min-height: 50px; }
+.is-coloring .current-number { width: 36px; height: 36px; border-radius: 11px; font-size: 20px; }
+.is-coloring .current-instruction strong { font-size: 13px; }
+.is-coloring .current-instruction div span { font-size: 11px; }
+.is-coloring .canvas-tag { display: none; }
+.is-coloring .canvas-scroll {
+  --canvas-height: max(340px, calc(100vh - 500px));
+  --canvas-height: max(340px, calc(100dvh - 500px));
+}
+.is-coloring .zoom-tools { padding: 3px 8px; min-height: 50px; }
+.is-coloring .icon-button, .is-coloring .zoom-label { min-width: 44px; min-height: 44px; }
+.is-coloring .zoom-label { min-width: 52px; }
+.is-coloring .encouragement { padding: 3px 0; min-height: 26px; font-size: 12px; }
+.is-coloring .action-bar { margin-top: 3px; gap: 6px; }
+.is-coloring .action-bar .button { min-height: 48px; padding: 5px; font-size: 13px; gap: 4px; }
+.is-coloring .download-button { min-height: 44px; margin-top: 6px; padding: 6px; font-size: 12px; }
+.is-coloring .small-note { margin-top: 5px; font-size: 10px; }
+@media (max-width: 380px) {
+  .is-coloring { padding: 0 8px; }
+  .is-coloring .brand b { font-size: 14px; }
+  .is-coloring .brand-mark { display: none; }
+  .is-coloring .save-status { font-size: 9px; }
+  .is-coloring .zoom-tools > span { font-size: 9px; }
+}
 @media (max-width: 599px) {
   .featured-preview .artwork {
     max-width: 240px;
