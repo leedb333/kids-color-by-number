@@ -69,16 +69,16 @@ function Home({ onOpen }: { onOpen: (drawing: Drawing) => void }) {
           <span className="preview-caption">색칠하면 이렇게 변해요</span>
         </div>
         <div className="featured-copy">
-          <span className="badge">첫 번째 정식 도안 · 무지개 놀이터</span>
+          <span className="badge">오늘의 추천 · 멋진 경찰차 로봇</span>
           <h2 id="featured-title">{featuredDrawing.title}</h2>
           <p>
-            무지개 아래, 노란 우비를 입은 아이!
+            씩씩한 경찰차가 멋진 로봇으로 변신!
             <br />
-            {featuredDrawing.colors.length}가지 색으로 놀이터를 채워 볼까요?
+            {featuredDrawing.colors.length}가지 색으로 완성해 볼까요?
           </p>
           <span className="details">
             {featuredDrawing.colors.length}색 <span>·</span>{' '}
-            {featuredDrawing.regions.length}개 영역 <span>·</span> 터치 SVG
+            {featuredDrawing.regions.length}곳 <span>·</span> 순서대로 톡톡!
           </span>
           {count > 0 && (
             <div className="saved-summary">
@@ -109,8 +109,7 @@ function Home({ onOpen }: { onOpen: (drawing: Drawing) => void }) {
           <span className="count-badge">{officialCatalog.length}개 도안</span>
         </div>
         <p className="catalog-note">
-          무지개와 경찰차 로봇을 골라 보세요. 나머지 네 그림도 차례로
-          준비할게요.
+          로봇, 공룡, 나비, 꽃! 좋아하는 그림을 골라 보세요.
         </p>
         <div className="catalog-grid">
           {officialCatalog.map((item) => (
@@ -127,8 +126,8 @@ function Home({ onOpen }: { onOpen: (drawing: Drawing) => void }) {
               key={item.id}
               aria-label={`${item.title}, ${item.colorCount}색, ${drawings[item.id]?.kind === 'official' ? '색칠하기' : '도안 준비 중'}`}
             >
-              <span className="catalog-icon" aria-hidden="true">
-                {item.icon}
+              <span className="catalog-preview" aria-hidden="true">
+                <Artwork drawing={drawings[item.id]} history={[]} preview />
               </span>
               <span className="catalog-name">{item.title}</span>
               <span className="catalog-meta">
@@ -580,6 +579,11 @@ export default function App() {
   const [online, setOnline] = useState(navigator.onLine)
   const [offlineReady, setOfflineReady] = useState(false)
   useEffect(() => {
+    // The removed design's saved records are no longer part of the app.
+    try {
+      for (const key of Object.keys(localStorage))
+        if (key.startsWith('coloring:v1:rainbow-child:')) localStorage.removeItem(key)
+    } catch { /* Storage restrictions must not prevent coloring. */ }
     const onOnline = () => setOnline(true)
     const onOffline = () => setOnline(false)
     const onReady = () => setOfflineReady(true)

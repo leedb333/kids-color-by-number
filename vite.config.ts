@@ -67,8 +67,8 @@ self.addEventListener('fetch', event => {
         manualChunks: (id) =>
           id.includes('/src/data/police-car-robot/')
             ? 'police-car-robot'
-            : id.includes('/src/data/rainbow-child/')
-              ? 'rainbow-child'
+            : id.includes('/src/data/new-drawings/')
+              ? id.split('/').pop()!.replace('.json', '')
               : undefined,
       },
     },

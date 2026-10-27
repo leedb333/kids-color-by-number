@@ -335,6 +335,18 @@ svg {
   font-weight: 750;
   word-break: keep-all;
 }
+.catalog-preview {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 132px;
+  pointer-events: none;
+}
+.catalog-preview .artwork {
+  height: 132px;
+  width: 106px;
+  border-radius: 8px;
+}
 .catalog-meta {
   font-size: 11px;
   color: #8d9384;

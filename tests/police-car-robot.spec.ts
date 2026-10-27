@@ -1,13 +1,15 @@
 import { expect, test, type Page } from '@playwright/test'
 import { readFile } from 'node:fs/promises'
 import { policeCarRobot as drawing } from '../src/data/police-car-robot'
-import { rainbowChild } from '../src/data/rainbow-child'
+import { newDrawings } from '../src/data/drawings'
 import { storageKey } from '../src/engine'
 import { measurePoliceFidelity } from './police-fidelity'
 
 const ordered = drawing.colors.flatMap((color) =>
   drawing.regions.filter((region) => region.colorId === color.id),
 )
+const otherDrawing = newDrawings[1]
+const otherFirst = otherDrawing.regions.find(r => r.colorId === 1)!
 const locator = (page: Page, id: string) =>
   page.locator(`[data-region="${id}"]`)
 async function open(page: Page) {
@@ -139,20 +141,20 @@ test('one blue lightbar tap fills exactly one cell; same-color robot and legs st
   )
 })
 
-test('undo, resume and confirmed reset remain isolated from existing rainbow records', async ({
+test('undo, resume and confirmed reset remain isolated from other drawing records', async ({
   page,
 }) => {
-  await page.addInitScript((key) => {
+  await page.addInitScript(({ key, id }) => {
     if (!localStorage.getItem(key))
       localStorage.setItem(
         key,
         JSON.stringify({
           version: 1,
-          history: ['sky'],
+          history: [id],
           updatedAt: new Date().toISOString(),
         }),
       )
-  }, storageKey(rainbowChild))
+  }, { key: storageKey(otherDrawing), id: otherFirst.id })
   await open(page)
   await tap(page, 'background')
   await tap(page, 'car-lightbar-white')
@@ -182,15 +184,15 @@ test('undo, resume and confirmed reset remain isolated from existing rainbow rec
   expect(
     await page.evaluate(
       (key) => JSON.parse(localStorage.getItem(key)!).history,
-      storageKey(rainbowChild),
+      storageKey(otherDrawing),
     ),
-  ).toEqual(['sky'])
+  ).toEqual([otherFirst.id])
   await page.getByRole('button', { name: '도안 선택' }).tap()
-  await page.getByRole('button', { name: '이어서 색칠하기' }).tap()
+  await page.getByRole('button', { name: `${otherDrawing.title}, 28색, 색칠하기`, exact: true }).tap()
   await expect(
-    page.getByRole('heading', { name: rainbowChild.title, exact: true }),
+    page.getByRole('heading', { name: otherDrawing.title, exact: true }),
   ).toBeVisible()
-  await expect(locator(page, 'sky')).toHaveAttribute('data-painted', 'true')
+  await expect(locator(page, otherFirst.id)).toHaveAttribute('data-painted', 'true')
 })
 
 test('hint zooms and centers a tiny tail light without painting it', async ({
